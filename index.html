@@ -1,188 +1,92 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#ffb703">
-<meta name="description" content="薯條點擊大亨：點擊薯條、升級設備、經營你的薯條帝國！">
-<title>🍟 薯條點擊大亨</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#ffb703"><meta name="description" content="薯條點擊大亨 3D：探索薯條島、收集薯條、升級你的店舖！">
+<title>🍟 薯條點擊大亨 3D</title>
 <style>
-:root{--ink:#25223a;--muted:#77758b;--cream:#fff9e9;--orange:#ff7a00;--yellow:#ffca3a;--pink:#ff4d8d;--blue:#6c63ff;--green:#22c55e;--card:rgba(255,255,255,.86);--shadow:0 18px 50px #4b2e4c22}
-*{box-sizing:border-box}html{min-height:100%;background:#fff4d7}body{margin:0;min-height:100vh;font-family:ui-rounded,"Trebuchet MS",system-ui,-apple-system,"Noto Sans TC",sans-serif;color:var(--ink);background:radial-gradient(ellipse at 12% 8%,#ffe7a3 0,transparent 32%),radial-gradient(ellipse at 90% 12%,#ffd3e4 0,transparent 34%),linear-gradient(145deg,#fff8e7,#f1edff 65%,#e5faff);overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#ff9f1c 1.5px,transparent 1.5px);background-size:26px 26px;mask-image:linear-gradient(to bottom,#000,transparent 75%)}
-button,input{font:inherit}button{cursor:pointer;touch-action:manipulation}button:focus-visible,input:focus-visible{outline:3px solid #6c63ff;outline-offset:3px}.app{max-width:1180px;margin:auto;padding:22px 18px 42px;position:relative}.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:12px}.logo{display:grid;place-items:center;width:54px;height:54px;border-radius:18px;background:linear-gradient(145deg,#ffcc45,#ff8a00);box-shadow:0 7px 0 #d65b08,0 12px 24px #ff8a0050;font-size:29px;transform:rotate(-5deg)}h1{font-size:clamp(21px,4vw,30px);margin:0;font-weight:1000;letter-spacing:-.8px}.subtitle{font-size:12px;color:var(--muted);font-weight:700;margin-top:3px}.status{border:1px solid #ffffffd9;background:#ffffffa6;border-radius:999px;padding:9px 13px;font-size:12px;font-weight:800;display:flex;align-items:center;gap:7px;white-space:nowrap}.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #22c55e20}
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}.stat{background:var(--card);border:1px solid #fff;border-radius:20px;padding:16px 18px;box-shadow:var(--shadow);backdrop-filter:blur(12px);min-width:0}.stat-label{font-size:12px;color:var(--muted);font-weight:800;display:flex;align-items:center;gap:6px}.stat-value{font-size:clamp(20px,3vw,30px);font-weight:1000;letter-spacing:-1px;margin-top:5px;overflow-wrap:anywhere}.stat-value small{font-size:12px;letter-spacing:0;color:var(--muted);font-weight:800}.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:18px;align-items:start}.panel{background:var(--card);border:1px solid #fff;border-radius:26px;box-shadow:var(--shadow);backdrop-filter:blur(16px);overflow:hidden}.click-panel{min-height:490px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 18px 22px;background:linear-gradient(155deg,#fffdf6dd,#ffe7b8cc)}.click-panel:before,.click-panel:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.click-panel:before{width:260px;height:260px;background:#ffca3a32;top:14%;left:calc(50% - 130px)}.click-panel:after{width:320px;height:320px;border:1px dashed #ff9f1c55;top:calc(14% - 30px);left:calc(50% - 160px);animation:orbit 24s linear infinite}.eyebrow{position:relative;z-index:1;text-transform:uppercase;letter-spacing:2px;color:#c46a00;font-size:11px;font-weight:1000}.click-title{position:relative;z-index:1;font-size:clamp(22px,4vw,30px);font-weight:1000;margin:8px 0 2px}.click-hint{position:relative;z-index:1;color:var(--muted);font-size:13px;font-weight:700;margin-bottom:22px;text-align:center}.fries-wrap{position:relative;z-index:2;display:grid;place-items:center;width:220px;height:220px}.fries-btn{position:relative;width:190px;height:190px;border:0;border-radius:50%;background:radial-gradient(circle at 34% 23%,#fff8ca,#ffcb47 58%,#ff9b19);box-shadow:0 12px 0 #d96c0c,0 22px 38px #c56b1b35,inset 0 4px 0 #ffffffb8;display:grid;place-items:center;transition:filter .18s,box-shadow .18s;user-select:none;-webkit-tap-highlight-color:transparent}.fries-btn:hover{filter:saturate(1.12) brightness(1.04);box-shadow:0 14px 0 #d96c0c,0 26px 42px #c56b1b45,inset 0 4px 0 #ffffffc9}.fries-btn:active{transform:scale(.92) rotate(-4deg)}.fries-btn .emoji{font-size:100px;filter:drop-shadow(0 9px 3px #a14d1633);transform:rotate(-7deg);display:block}.fries-btn.bounce{animation:jelly .42s cubic-bezier(.2,1.7,.45,1)}.fries-btn.upgrade-glow{animation:glow .65s ease-out}.ring{position:absolute;inset:-7px;border-radius:50%;border:3px solid #ff9f1c77;animation:ring 1.8s ease-out infinite;pointer-events:none}.ring:nth-child(2){inset:-17px;animation-delay:.6s}.click-value{position:relative;z-index:1;background:#fff;border:1px solid #ffdc9a;border-radius:999px;padding:10px 17px;margin-top:22px;font-size:13px;font-weight:900;box-shadow:0 5px 0 #f3d6a5}.click-value strong{color:#e66b00;font-size:16px}.click-count{position:relative;z-index:1;color:var(--muted);font-size:12px;font-weight:800;margin-top:10px}.float-text{position:fixed;z-index:1000;pointer-events:none;font-size:22px;font-weight:1000;color:#168a48;text-shadow:0 2px #fff,0 4px 0 #ffffff88;animation:floatUp .9s cubic-bezier(.15,.7,.2,1) forwards;white-space:nowrap}.spark{position:fixed;z-index:999;width:8px;height:8px;border-radius:3px;pointer-events:none;animation:spark .65s ease-out forwards}
-.right-column{display:grid;gap:18px}.panel-head{display:flex;align-items:center;justify-content:space-between;padding:20px 20px 12px;gap:10px}.panel-head h2{font-size:17px;margin:0;font-weight:1000}.panel-head p{margin:4px 0 0;color:var(--muted);font-size:11px;font-weight:700}.tag{font-size:10px;font-weight:900;color:#805200;background:#fff0bd;border-radius:999px;padding:6px 9px;white-space:nowrap}.shop-list{padding:0 12px 14px;display:grid;gap:9px}.shop-item{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px;border:1px solid #eeeaf6;background:#ffffffb5;border-radius:17px;transition:transform .18s,border-color .18s,box-shadow .18s}.shop-item:hover{transform:translateY(-2px);border-color:#ffc86a;box-shadow:0 8px 18px #39285c0c}.shop-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#fff0c1,#ffe0a0);font-size:24px}.shop-name{font-size:13px;font-weight:1000}.shop-desc{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.4}.shop-level{font-size:10px;font-weight:900;color:#7c7394;margin-top:4px}.buy-btn{border:0;border-radius:12px;background:linear-gradient(135deg,#ffb703,#ff8a00);color:#4d2c00;font-size:11px;font-weight:1000;padding:10px 11px;box-shadow:0 4px 0 #d86d00;min-width:80px;transition:transform .15s,filter .15s}.buy-btn:hover{filter:brightness(1.06);transform:translateY(-1px)}.buy-btn:active{transform:translateY(2px);box-shadow:0 2px 0 #d86d00}.buy-btn:disabled{filter:grayscale(.8);opacity:.55;cursor:not-allowed;transform:none}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.timer-content{padding:0 20px 20px}.timer-display{font-size:29px;font-weight:1000;letter-spacing:1px;margin:3px 0 12px}.timer-track{height:10px;border-radius:99px;background:#ebe7f4;overflow:hidden}.timer-bar{height:100%;width:100%;border-radius:99px;background:linear-gradient(90deg,#6c63ff,#ff4d8d);transition:width .3s}.timer-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.secondary-btn{border:1px solid #e7e0f1;background:#fff;border-radius:12px;padding:9px 13px;font-size:11px;font-weight:900;color:var(--ink);transition:transform .15s,background .15s}.secondary-btn:hover{transform:translateY(-1px);background:#fff8e9}.secondary-btn.primary{background:#6c63ff;color:white;border-color:#6c63ff}.small-copy{font-size:11px;color:var(--muted);line-height:1.6}.leaderboard{padding:0 18px 18px}.leader-row{display:flex;align-items:center;justify-content:space-between;padding:10px 2px;border-bottom:1px solid #eeeaf4;font-size:12px;font-weight:800}.leader-row:last-child{border:0}.rank{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:9px;background:#f1edff;margin-right:8px}.player-form{display:flex;gap:7px;margin-top:10px}.player-form input{width:100%;min-width:0;border:1px solid #e6e0f0;background:#fff;border-radius:12px;padding:10px 12px;font-size:12px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#27223b;color:white;padding:12px 17px;border-radius:14px;box-shadow:0 12px 30px #20163233;font-size:12px;font-weight:900;z-index:1200;transition:.25s;max-width:calc(100vw - 32px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.footer{text-align:center;color:#9993aa;font-size:10px;font-weight:700;margin:20px 0 0}.hidden{display:none!important}
-@keyframes jelly{0%{transform:scale(1) rotate(0)}22%{transform:scale(1.13,.86) rotate(-7deg)}42%{transform:scale(.88,1.12) rotate(5deg)}62%{transform:scale(1.06,.96) rotate(-2deg)}80%{transform:scale(.98,1.02) rotate(1deg)}100%{transform:scale(1) rotate(0)}}@keyframes floatUp{0%{opacity:0;transform:translate(-50%,-4px) scale(.75) rotate(-5deg)}12%{opacity:1}75%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--drift,0px)),-105px) scale(1.16) rotate(var(--rot,8deg)}}@keyframes spark{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(140deg) scale(.15)}}@keyframes ring{0%{transform:scale(.92);opacity:.8}100%{transform:scale(1.16);opacity:0}}@keyframes orbit{to{transform:rotate(360deg)}}@keyframes glow{0%{filter:brightness(1)}45%{filter:brightness(1.2) saturate(1.4)}100%{filter:brightness(1)}}@media(max-width:780px){.app{padding:14px 12px 30px}.layout{grid-template-columns:1fr}.click-panel{min-height:440px}.fries-wrap{width:200px;height:200px}.fries-btn{width:170px;height:170px}.fries-btn .emoji{font-size:90px}.right-column{grid-template-columns:1fr 1fr;align-items:start}.right-column .panel:first-child{grid-column:1/-1}.bottom-grid{margin-top:14px}}@media(max-width:520px){.stats{gap:7px}.stat{padding:12px 10px;border-radius:15px}.stat-label{font-size:10px}.stat-value{font-size:20px}.topbar{align-items:flex-start}.status{font-size:10px;padding:8px}.brand{gap:9px}.logo{width:45px;height:45px;border-radius:15px;font-size:24px}.subtitle{font-size:10px}.click-panel{min-height:410px;padding:22px 12px}.right-column{grid-template-columns:1fr}.right-column .panel:first-child{grid-column:auto}.bottom-grid{grid-template-columns:1fr}.shop-item{grid-template-columns:44px minmax(0,1fr) auto;padding:10px}.shop-icon{width:42px;height:42px}.buy-btn{min-width:72px;padding:9px 8px}.panel-head{padding:17px 16px 11px}.shop-list{padding:0 10px 12px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
-
-.auth-shell{max-width:520px;margin:8vh auto 28px;padding:0 16px;position:relative}.auth-card{background:#ffffffed;border:1px solid #fff;border-radius:26px;padding:26px;box-shadow:0 18px 50px #4b2e4c22}.auth-card h2{margin:0 0 8px;font-size:24px}.auth-card p{color:#77758b;font-size:13px;line-height:1.6}.auth-form{display:grid;gap:11px;margin-top:18px}.auth-form input,.room-form input{width:100%;min-width:0;border:1px solid #e6e0f0;background:#fff;border-radius:12px;padding:12px;font-size:14px}.auth-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.auth-btn{border:0;border-radius:12px;padding:12px;background:linear-gradient(135deg,#ffb703,#ff8a00);font-weight:900;color:#4d2c00}.auth-btn.alt{background:#6c63ff;color:white}.auth-btn:disabled{opacity:.6}.auth-message{font-size:12px;color:#6c63ff;min-height:18px;overflow-wrap:anywhere}.account-pill{display:flex;align-items:center;gap:8px}.account-pill button{border:1px solid #e7e0f1;background:white;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900}.multiplayer{margin-top:18px}.room-content{padding:0 18px 18px}.room-form{display:flex;gap:8px;flex-wrap:wrap}.room-form input{flex:1;min-width:130px}.room-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.room-list{display:grid;gap:8px;margin-top:12px}.room-player{display:flex;justify-content:space-between;gap:10px;padding:9px 11px;background:#ffffffb5;border:1px solid #eeeaf6;border-radius:12px;font-size:12px;font-weight:800}.room-code{font-weight:1000;color:#6c63ff;letter-spacing:2px;font-size:19px}.room-note{font-size:11px;color:#77758b;line-height:1.6;margin-top:10px}
+:root{color-scheme:dark;--gold:#ffc83d;--ink:#241b35;--glass:#18152be8}*{box-sizing:border-box}body{margin:0;background:#111827;color:#fff;font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;overflow:hidden}button,input{font:inherit}button{border:0;border-radius:14px;padding:10px 14px;font-weight:800;background:var(--gold);color:#342039;cursor:pointer}button:disabled{opacity:.5}#game{position:fixed;inset:0}canvas{display:block;width:100%;height:100%;touch-action:none}#hud{position:fixed;inset:0;pointer-events:none;padding: max(12px,env(safe-area-inset-top)) 12px max(12px,env(safe-area-inset-bottom));display:flex;flex-direction:column;justify-content:space-between;gap:10px}#hud button,#hud input,#hud .interactive{pointer-events:auto}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.panel{background:var(--glass);border:1px solid #ffffff28;border-radius:18px;padding:10px 13px;backdrop-filter:blur(10px);box-shadow:0 10px 30px #0003}.stats{display:flex;gap:8px;flex-wrap:wrap}.stat{font-weight:900;font-size:15px}.stat small{display:block;color:#cbd5e1;font-size:11px;font-weight:600}.actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.actions button{font-size:12px;padding:9px 11px}.bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}.hint{font-size:12px;color:#e2e8f0;max-width:250px}.big{font-size:18px}.touch{display:none;gap:8px;align-items:flex-end}.dpad{display:grid;grid-template-columns:42px 42px 42px;grid-template-rows:42px 42px 42px;gap:4px}.dpad button,.look button{padding:0;background:#18152bdc;color:white;border:1px solid #ffffff35;font-size:19px;touch-action:none}.dpad .up{grid-column:2}.dpad .left{grid-row:2;grid-column:1}.dpad .down{grid-row:2;grid-column:2}.dpad .right{grid-row:2;grid-column:3}.look{display:flex;gap:6px}.look button{width:42px;height:42px}.primary{background:#fb7185;color:#40132a}.overlay{position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:18px;background:linear-gradient(140deg,#10152bf2,#4c1d65ed)}.auth{width:min(430px,100%);background:#fff;color:#251b35;border-radius:26px;padding:24px;box-shadow:0 25px 80px #0006}.auth h1{margin:0 0 6px;font-size:27px}.auth p{color:#6b6479;margin:0 0 18px}.auth input{width:100%;padding:13px;border:1px solid #ddd5e8;border-radius:12px;margin:6px 0;color:#241b35;background:white}.auth button{width:100%;margin-top:8px}.auth .secondary{background:#eee8f7}.auth .msg{font-size:13px;margin-top:10px;min-height:18px;color:#7c2d12}.hidden{display:none!important}#toast{position:fixed;top:22%;left:50%;transform:translateX(-50%);background:#17142beF;padding:10px 16px;border-radius:999px;font-weight:900;opacity:0;transition:opacity .2s;pointer-events:none;z-index:5}#toast.show{opacity:1}#shop{position:fixed;right:12px;top:100px;width:min(245px,70vw);max-height:48vh;overflow:auto;pointer-events:auto}#shop h3{margin:0 0 8px}#shop button{width:100%;margin:4px 0;text-align:left;font-size:12px}#roomPanel{position:fixed;left:12px;top:110px;width:min(230px,65vw);pointer-events:auto}#roomPanel button{margin-top:6px;font-size:12px}@media(max-width:650px){.touch{display:flex}.hint{display:none}.top{align-items:flex-start}.stats{max-width:62vw}.stat{font-size:13px}.actions{max-width:38vw}.actions button{padding:8px;font-size:11px}#shop{top:115px;right:8px;width:155px}#roomPanel{top:auto;bottom:125px;left:8px;width:160px}.bottom{align-items:flex-end}.panel{padding:9px}.big{font-size:15px}}@media(min-width:900px){#hud{padding:20px 24px 22px}.stat{font-size:18px}}
 </style>
 </head>
 <body>
-<section class="auth-shell" id="authShell">
-  <div class="auth-card">
-    <div class="brand"><div class="logo">🍟</div><div><h1>薯條點擊大亨</h1><div class="subtitle">帳號登入 · 雲端存檔 · 多人連線</div></div></div>
-    <h2 style="margin-top:24px">登入你的薯條帝國</h2>
-    <p>必須使用電子郵件與密碼登入或註冊。登入後可在不同裝置繼續遊玩、儲存進度，並和朋友加入同一個房間競賽。</p>
-    <form class="auth-form" id="authForm">
-      <input id="authEmail" type="email" autocomplete="email" required placeholder="電子郵件">
-      <input id="authPassword" type="password" autocomplete="current-password" minlength="6" required placeholder="密碼（至少 6 個字元）">
-      <div class="auth-actions"><button class="auth-btn alt" type="submit" id="loginBtn">登入</button><button class="auth-btn" type="button" id="signupBtn">建立帳號</button></div>
-      <button class="secondary-btn" type="button" id="resetPasswordBtn">忘記密碼？寄送重設信</button>
-      <div class="auth-message" id="authMessage" role="status" aria-live="polite"></div>
-    </form>
-  </div>
-</section>
-<div class="app" id="appShell" style="display:none">
-<header class="topbar">
-  <div class="brand"><div class="logo">🍟</div><div><h1>薯條點擊大亨</h1><div class="subtitle">FRIES TYCOON · 點出你的薯條帝國</div></div></div>
-  <div class="account-pill"><div class="status"><span class="dot"></span><span id="cloudStatus">登入中</span></div><button id="logoutBtn">登出</button></div>
-</header>
-<section class="stats">
-  <div class="stat"><div class="stat-label">🪙 薯條基金</div><div class="stat-value" id="money">$0</div></div>
-  <div class="stat"><div class="stat-label">⚡ 每次點擊</div><div class="stat-value" id="clickPower">$1 <small>/ 點</small></div></div>
-  <div class="stat"><div class="stat-label">💸 自動收益</div><div class="stat-value" id="income">$0 <small>/ 秒</small></div></div>
-</section>
-<main class="layout">
-  <section class="panel click-panel" id="clickPanel">
-    <div class="eyebrow">✦ 熱騰騰 · 點擊賺錢 ✦</div>
-    <div class="click-title">點我賣薯條！</div>
-    <div class="click-hint">每點一下就能賺錢，升級設備賺更多</div>
-    <div class="fries-wrap">
-      <div class="ring"></div><div class="ring"></div>
-      <button class="fries-btn" id="friesBtn" aria-label="點擊薯條賺錢"><span class="emoji">🍟</span></button>
-    </div>
-    <div class="click-value">本次收益 <strong id="clickReward">+$1</strong></div>
-    <div class="click-count">已服務 <span id="clicks">0</span> 位顧客　✦　連點開店中</div>
-  </section>
-  <div class="right-column">
-    <section class="panel">
-      <div class="panel-head"><div><h2>🛍️ 薯條升級商店</h2><p>投資設備，打造自動化薯條帝國</p></div><span class="tag">UPGRADE</span></div>
-      <div class="shop-list" id="shopList"></div>
-    </section>
-  </div>
-</main>
-<section class="bottom-grid">
-  <section class="panel">
-    <div class="panel-head"><div><h2>⏱️ 開店計時器</h2><p>開店期間持續累積自動收益</p></div><span class="tag" id="timerState">營業中</span></div>
-    <div class="timer-content">
-      <div class="timer-display" id="timerDisplay">05:00</div>
-      <div class="timer-track"><div class="timer-bar" id="timerBar"></div></div>
-      <div class="timer-actions"><button class="secondary-btn primary" id="timerToggle">⏸ 暫停計時</button><button class="secondary-btn" id="timerReset">↻ 重設 5 分鐘</button><button class="secondary-btn" id="saveBtn">💾 立即存檔</button></div>
-      <p class="small-copy">計時器歸零後自動收益暫停；你仍可手動點擊薯條。按重設可重新營業。</p>
-    </div>
-  </section>
-  <section class="panel">
-    <div class="panel-head"><div><h2>🏆 店長紀錄</h2><p>本裝置的遊玩紀錄與雲端排行榜</p></div><span class="tag">RECORD</span></div>
-    <div class="leaderboard">
-      <div class="leader-row"><span>🍟 累計點擊</span><strong id="totalClicks">0</strong></div>
-      <div class="leader-row"><span>🧾 已購買升級</span><strong id="upgradeCount">0</strong></div>
-      <div class="leader-row"><span>💰 累計營收</span><strong id="lifetime">$0</strong></div>
-      <div class="player-form"><input id="playerName" maxlength="20" placeholder="輸入店長暱稱（最多 20 字）" aria-label="店長暱稱"><button class="secondary-btn" id="syncBtn">☁️ 同步</button></div>
-      <div class="small-copy" id="syncMessage" style="margin-top:9px">設定 Supabase 後可同步你的紀錄。</div>
-    </div>
-  </section>
-</section>
-
-<section class="panel multiplayer">
-  <div class="panel-head"><div><h2>👥 多人薯條派對</h2><p>建立房間或輸入朋友的房間代碼，實時比較營收</p></div><span class="tag">ONLINE</span></div>
-  <div class="room-content">
-    <div>目前房間： <span class="room-code" id="roomCodeLabel">尚未加入</span></div>
-    <div class="room-form" style="margin-top:12px"><input id="roomNameInput" maxlength="30" placeholder="房間名稱（建立時使用）"><button class="secondary-btn primary" id="createRoomBtn">＋ 建立房間</button></div>
-    <div class="room-form" style="margin-top:8px"><input id="joinRoomInput" maxlength="6" placeholder="輸入 6 位房間代碼" autocapitalize="characters"><button class="secondary-btn" id="joinRoomBtn">加入房間</button><button class="secondary-btn" id="leaveRoomBtn">離開房間</button></div>
-    <div class="room-list" id="roomPlayers"><div class="small-copy">登入後建立或加入房間即可開始多人連線。</div></div>
-    <div class="room-note" id="roomMessage">房間成員分數會透過 Supabase Realtime 更新。多人功能需要網路連線。</div>
-  </div>
-</section>
-<div class="footer">薯條點擊大亨 · 登入存檔 · 與朋友一起競賽 🍟</div>
+<div id="game"></div>
+<div id="hud" class="hidden">
+ <div class="top">
+  <div class="panel stats"><div class="stat"><small>薯條幣</small>🍟 <span id="money">0</span></div><div class="stat"><small>收集總數</small>✨ <span id="clicks">0</span></div><div class="stat"><small>每次收集</small>💰 <span id="power">1</span></div></div>
+  <div class="actions interactive"><button id="saveBtn">☁️ 存檔</button><button id="logoutBtn">登出</button></div>
+ </div>
+ <div class="panel" id="shop"><h3>🏪 薯條商店</h3><button id="buyPower">🥔 加大薯條 <span id="powerCost"></span></button><button id="buyAuto">🤖 自動炸鍋 <span id="autoCost"></span></button><button id="buyShop">🏬 擴建店面 <span id="shopCost"></span></button></div>
+ <div class="panel" id="roomPanel"><b>👥 多人房間</b><div id="roomText" style="font-size:12px;color:#e2e8f0;margin-top:4px">尚未加入房間</div><button id="createRoom">建立房間</button><div style="display:flex;gap:4px"><input id="roomCode" maxlength="6" placeholder="房間代碼" style="min-width:0;width:80px;border:0;border-radius:9px;padding:7px;text-transform:uppercase"><button id="joinRoom">加入</button></div><div id="players" style="font-size:11px;margin-top:5px"></div></div>
+ <div class="bottom"><div class="panel hint">WASD／方向鍵移動 · 點擊薯條收集 · 拖曳畫面旋轉視角<br>手機可使用左側方向鍵與右側視角按鈕</div><div class="touch"><div class="dpad"><button class="up" data-move="forward">▲</button><button class="left" data-move="left">◀</button><button class="down" data-move="back">▼</button><button class="right" data-move="right">▶</button></div><div class="look"><button id="lookLeft">↶</button><button id="collectTouch" class="primary">🍟</button><button id="lookRight">↷</button></div></div></div>
 </div>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="toast"></div>
+<div id="authShell" class="overlay"><div class="auth"><h1>🍟 薯條點擊大亨 3D</h1><p>登入後進入 3D 薯條島，保存你的經營進度。</p><form id="authForm"><input id="email" type="email" placeholder="電子郵件" autocomplete="email" required><input id="password" type="password" placeholder="密碼（至少 6 個字元）" autocomplete="current-password" minlength="6" required><button id="loginBtn" type="submit">登入遊戲</button></form><button id="signupBtn" class="secondary">建立新帳號</button><button id="resetBtn" class="secondary">寄送重設密碼信</button><div class="msg" id="authMsg"></div></div></div>
 <script type="module">
-/*
- * Optional Supabase cloud sync:
- * 1) Create a Supabase project and run supabase/schema.sql.
- * 2) Fill SUPABASE_URL and SUPABASE_ANON_KEY below with the project's URL
- *    and publishable/anon key. Never put a service_role/secret key in a browser.
- */
-const SUPABASE_URL = "https://pmdbdckspefacykvfvbq.supabase.co";
-const SUPABASE_ANON_KEY = "sb_publishable_R1p34EuAIB00lCGvu-CgtA_bX_lBPw9";
-const SAVE_KEY = "fries-tycoon-save-v2";
-const START_TIME = 300;
-const products = [
- {id:"better-potato",name:"優質馬鈴薯",desc:"每次點擊額外 +$1",icon:"🥔",base:25,scale:1.48,type:"click",amount:1},
- {id:"golden-oil",name:"黃金炸油鍋",desc:"每次點擊額外 +$5",icon:"🍳",base:120,scale:1.62,type:"click",amount:5},
- {id:"sauce-station",name:"神級醬料台",desc:"每次點擊額外 +$25",icon:"🧂",base:650,scale:1.72,type:"click",amount:25},
- {id:"mini-counter",name:"迷你販售櫃",desc:"每秒自動賺取 $2",icon:"🏪",base:80,scale:1.55,type:"auto",amount:2},
- {id:"robot-chef",name:"機器人廚師",desc:"每秒自動賺取 $12",icon:"🤖",base:450,scale:1.65,type:"auto",amount:12},
- {id:"fries-factory",name:"薯條工廠",desc:"每秒自動賺取 $80",icon:"🏭",base:2500,scale:1.75,type:"auto",amount:80}
-];
-const fresh = () => ({money:0,clicks:0,lifetime:0,levels:{},remaining:START_TIME,timerRunning:true,playerName:""});
-let state = fresh();
-let toastTimer;
-let currentUser = null;
-let cloudSaveTimer = null;
-let activeRoom = null;
-let roomChannel = null;
-let roomSyncTimer = null;
-let lastCloudSaveAt = 0;
-const $ = id => document.getElementById(id);
-const fmt = n => "$" + Math.floor(n).toLocaleString("en-US");
-const totalLevels = () => products.reduce((s,p)=>s+(state.levels[p.id]||0),0);
-const clickPower = () => 1 + products.filter(p=>p.type==="click").reduce((s,p)=>s+(state.levels[p.id]||0)*p.amount,0);
-const autoIncome = () => products.filter(p=>p.type==="auto").reduce((s,p)=>s+(state.levels[p.id]||0)*p.amount,0);
-const costFor = p => Math.floor(p.base * Math.pow(p.scale,state.levels[p.id]||0));
-function showToast(msg){const t=$("toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200)}
-function saveLocal(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(state));}catch(e){console.warn("Local save unavailable",e)}scheduleCloudSave()}
-function scheduleCloudSave(){if(!currentUser||!supabase)return;clearTimeout(cloudSaveTimer);cloudSaveTimer=setTimeout(()=>saveCloudState(false),1100)}
-async function saveCloudState(showMessage=false){if(!currentUser||!supabase)return;try{const snapshot={...state,levels:{...state.levels}};const {error}=await supabase.from("fries_game_saves").upsert({user_id:currentUser.id,state:snapshot,updated_at:new Date().toISOString()},{onConflict:"user_id"});if(error)throw error;lastCloudSaveAt=Date.now();if(showMessage)showToast("雲端存檔成功 ☁️")}catch(e){console.error(e);if(showMessage)showToast("雲端存檔失敗，請檢查網路");}}
-async function loadCloudState(){if(!currentUser||!supabase)return;try{const {data,error}=await supabase.from("fries_game_saves").select("state").eq("user_id",currentUser.id).maybeSingle();if(error)throw error;if(data&&data.state&&typeof data.state==="object"){const cloud=data.state;state={...fresh(),...cloud,levels:{...fresh().levels,...(cloud.levels||{})}};state.money=Math.max(0,Number(state.money)||0);state.remaining=Math.max(0,Math.min(START_TIME,Number(state.remaining)||0));state.clicks=Math.max(0,Number(state.clicks)||0);state.lifetime=Math.max(0,Number(state.lifetime)||0);saveLocal();render();$("syncMessage").textContent="已載入雲端存檔。";}else{await saveCloudState(false);$("syncMessage").textContent="已建立你的第一份雲端存檔。"}}catch(e){console.error(e);$("syncMessage").textContent="載入雲端存檔失敗："+(e.message||"請稍後重試")}}
-function showLoggedIn(user){currentUser=user;$("authShell").style.display="none";$("appShell").style.display="block";$("cloudStatus").textContent=user.email||"已登入";$("syncMessage").textContent="帳號已登入，雲端存檔啟用中。";loadCloudState();if(activeRoom)refreshRoomPlayers();}
-function loadLocal(){try{const raw=localStorage.getItem(SAVE_KEY);if(raw){const parsed=JSON.parse(raw);state={...fresh(),...parsed,levels:{...fresh().levels,...parsed.levels}};state.money=Math.max(0,Number(state.money)||0);state.remaining=Math.max(0,Math.min(START_TIME,Number(state.remaining)||0));state.clicks=Math.max(0,Number(state.clicks)||0);state.lifetime=Math.max(0,Number(state.lifetime)||0)}}catch(e){state=fresh()}}
-function renderShop(){
- $("shopList").innerHTML=products.map(p=>{const level=state.levels[p.id]||0,cost=costFor(p);return `<article class="shop-item"><div class="shop-icon">${p.icon}</div><div><div class="shop-name">${p.name}</div><div class="shop-desc">${p.desc}</div><div class="shop-level">擁有 Lv.${level}</div></div><button class="buy-btn" data-buy="${p.id}" ${state.money<cost?"disabled":""}>${fmt(cost)}<br><small>購買</small></button></article>`}).join("");
- $("shopList").querySelectorAll("[data-buy]").forEach(btn=>btn.addEventListener("click",()=>buy(btn.dataset.buy)));
-}
-function render(){
- $("money").textContent=fmt(state.money);$("clickPower").innerHTML=`${fmt(clickPower())} <small>/ 點</small>`;$("income").innerHTML=`${fmt(autoIncome())} <small>/ 秒</small>`;
- $("clickReward").textContent="+"+fmt(clickPower());$("clicks").textContent=state.clicks.toLocaleString();$("totalClicks").textContent=state.clicks.toLocaleString();$("upgradeCount").textContent=totalLevels().toLocaleString();$("lifetime").textContent=fmt(state.lifetime);
- $("timerDisplay").textContent=`${String(Math.floor(state.remaining/60)).padStart(2,"0")}:${String(Math.floor(state.remaining%60)).padStart(2,"0")}`;
- $("timerBar").style.width=(state.remaining/START_TIME*100)+"%";$("timerToggle").textContent=state.timerRunning?"⏸ 暫停計時":"▶ 開始營業";$("timerState").textContent=state.timerRunning?"營業中":"已暫停";
- $("playerName").value=state.playerName||"";renderShop();
-}
-function buy(id){const p=products.find(x=>x.id===id);if(!p)return;const cost=costFor(p);if(state.money<cost){showToast("金額不足！再多賣一些薯條吧 🍟");return}state.money-=cost;state.levels[id]=(state.levels[id]||0)+1;saveLocal();render();$("friesBtn").classList.remove("upgrade-glow");void $("friesBtn").offsetWidth;$("friesBtn").classList.add("upgrade-glow");showToast(`升級成功！${p.name} Lv.${state.levels[id]}`)}
-function spawnFloat(x,y,amount){const el=document.createElement("div");el.className="float-text";el.textContent="+"+fmt(amount);el.style.left=x+"px";el.style.top=y+"px";el.style.setProperty("--drift",(Math.random()*70-35)+"px");el.style.setProperty("--rot",(Math.random()*20-10)+"deg");document.body.appendChild(el);el.addEventListener("animationend",()=>el.remove(),{once:true})}
-function spawnSparks(x,y){const colors=["#ff7a00","#ffca3a","#ff4d8d","#6c63ff","#22c55e"];for(let i=0;i<7;i++){const s=document.createElement("i");s.className="spark";s.style.left=x+"px";s.style.top=y+"px";s.style.background=colors[Math.floor(Math.random()*colors.length)];s.style.setProperty("--dx",(Math.random()*130-65)+"px");s.style.setProperty("--dy",(Math.random()*-100-15)+"px");document.body.appendChild(s);s.addEventListener("animationend",()=>s.remove(),{once:true})}}
-function clickFries(e){const value=clickPower();state.money+=value;state.lifetime+=value;state.clicks++;const r=$("friesBtn").getBoundingClientRect();const x=e.clientX??(r.left+r.width/2),y=e.clientY??(r.top+r.height/2);spawnFloat(x,y,value);spawnSparks(x,y);const b=$("friesBtn");b.classList.remove("bounce");void b.offsetWidth;b.classList.add("bounce");saveLocal();render()}
-$("friesBtn").addEventListener("pointerdown",clickFries);
-$("timerToggle").addEventListener("click",()=>{if(state.remaining<=0&&!state.timerRunning){showToast("時間已到，請按重設重新營業");return}state.timerRunning=!state.timerRunning;saveLocal();render()});
-$("timerReset").addEventListener("click",()=>{state.remaining=START_TIME;state.timerRunning=true;saveLocal();render();showToast("新一輪營業開始！")});
-$("saveBtn").addEventListener("click",async()=>{saveLocal();await saveCloudState(true);showToast("遊戲進度已儲存 💾")});
-$("playerName").addEventListener("change",e=>{state.playerName=e.target.value.trim().slice(0,20);saveLocal()});
-let supabase=null;
-async function setupSupabase(){try{const {createClient}=await import("https://esm.sh/@supabase/supabase-js@2.57.0");supabase=createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});const {data:{session}}=await supabase.auth.getSession();if(session?.user)showLoggedIn(session.user);else{$("authShell").style.display="block";$("appShell").style.display="none";$("authMessage").textContent="請登入或建立帳號後遊玩。"}supabase.auth.onAuthStateChange((event,session)=>{if(session?.user){if(!currentUser||currentUser.id!==session.user.id)showLoggedIn(session.user)}else{currentUser=null;leaveRoom(false);$("authShell").style.display="block";$("appShell").style.display="none";$("cloudStatus").textContent="未登入"}});$("cloudStatus").textContent="請登入";}catch(e){console.error(e);$("authMessage").textContent="無法連線到登入服務："+(e.message||"請稍後再試");$("authShell").style.display="block";$("appShell").style.display="none"}}
-async function syncCloud(){state.playerName=$("playerName").value.trim().slice(0,20);saveLocal();if(!currentUser){showToast("請先登入才能同步");return}await saveCloudState(true);await syncRoomScore()}
-
-$("syncBtn").addEventListener("click",syncCloud);
-
-$("authForm").addEventListener("submit",async e=>{e.preventDefault();if(!supabase){showToast("登入服務尚未就緒");return}const email=$("authEmail").value.trim(),password=$("authPassword").value;const btn=$("loginBtn");btn.disabled=true;$("authMessage").textContent="正在登入…";try{const {data,error}=await supabase.auth.signInWithPassword({email,password});if(error)throw error;showLoggedIn(data.user);$("authMessage").textContent="登入成功。"}catch(err){$("authMessage").textContent=err.message||"登入失敗";}finally{btn.disabled=false}});
-$("signupBtn").addEventListener("click",async()=>{if(!supabase){showToast("登入服務尚未就緒");return}const email=$("authEmail").value.trim(),password=$("authPassword").value;if(!email||password.length<6){$("authMessage").textContent="請輸入有效電子郵件及至少 6 個字元的密碼。";return}const btn=$("signupBtn");btn.disabled=true;$("authMessage").textContent="正在建立帳號…";try{const {data,error}=await supabase.auth.signUp({email,password});if(error)throw error;if(data.session&&data.user){showLoggedIn(data.user);$("authMessage").textContent="註冊成功，已登入。"}else{$("authMessage").textContent="註冊成功！請查看電子郵件完成驗證，再回來登入。";}}catch(err){$("authMessage").textContent=err.message||"註冊失敗";}finally{btn.disabled=false}});
-$("resetPasswordBtn").addEventListener("click",async()=>{if(!supabase)return;const email=$("authEmail").value.trim();if(!email){$("authMessage").textContent="請先填寫電子郵件。";return}try{const {error}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:location.origin+location.pathname});if(error)throw error;$("authMessage").textContent="如果該信箱可重設密碼，系統會寄送重設信。"}catch(err){$("authMessage").textContent=err.message||"無法寄送重設信"}});
-$("logoutBtn").addEventListener("click",async()=>{await saveCloudState(false);leaveRoom(false);if(supabase)await supabase.auth.signOut();currentUser=null;$("appShell").style.display="none";$("authShell").style.display="block";$("authMessage").textContent="你已登出。"});
-function makeRoomCode(){const chars="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";let code="";for(let i=0;i<6;i++)code+=chars[Math.floor(Math.random()*chars.length)];return code}
-async function createRoom(){if(!currentUser||!supabase)return;const room_code=makeRoomCode();const room_name=$("roomNameInput").value.trim().slice(0,30)||"薯條派對";$("createRoomBtn").disabled=true;try{const {error}=await supabase.from("fries_multiplayer_rooms").insert({room_code,host_id:currentUser.id,room_name});if(error)throw error;await enterRoom(room_code);$("roomMessage").textContent="房間已建立，把代碼分享給朋友即可加入。";}catch(e){$("roomMessage").textContent="建立房間失敗："+(e.message||"請重試");}finally{$("createRoomBtn").disabled=false}}
-async function joinRoom(){if(!currentUser||!supabase)return;const code=$("joinRoomInput").value.trim().toUpperCase();if(!/^[A-Z0-9]{6}$/.test(code)){$("roomMessage").textContent="請輸入 6 位英數房間代碼。";return}try{const {data,error}=await supabase.from("fries_multiplayer_rooms").select("room_code,room_name").eq("room_code",code).maybeSingle();if(error)throw error;if(!data)throw new Error("找不到房間，請確認代碼");await enterRoom(data.room_code);$("roomMessage").textContent="已加入「"+data.room_name+"」。";}catch(e){$("roomMessage").textContent="加入房間失敗："+(e.message||"請重試")}}
-async function enterRoom(code){leaveRoom(false);activeRoom=code;$("roomCodeLabel").textContent=code;const name=state.playerName||currentUser.email?.split("@")[0]||"店長";const {error}=await supabase.from("fries_multiplayer_players").upsert({room_code:code,user_id:currentUser.id,display_name:name.slice(0,20),money:Math.floor(state.money),clicks:state.clicks,updated_at:new Date().toISOString()},{onConflict:"room_code,user_id"});if(error)throw error;roomChannel=supabase.channel("fries-room-"+code).on("postgres_changes",{event:"*",schema:"public",table:"fries_multiplayer_players",filter:"room_code=eq."+code},()=>refreshRoomPlayers()).subscribe();await refreshRoomPlayers();await syncRoomScore();clearInterval(roomSyncTimer);roomSyncTimer=setInterval(syncRoomScore,4000)}
-async function refreshRoomPlayers(){if(!activeRoom||!supabase)return;try{const {data,error}=await supabase.from("fries_multiplayer_players").select("user_id,display_name,money,clicks,updated_at").eq("room_code",activeRoom).order("money",{ascending:false});if(error)throw error;const players=data||[];$("roomPlayers").innerHTML=players.length?players.map((p,i)=>'<div class="room-player"><span>'+(["🥇","🥈","🥉"][i]||"🍟")+' '+escapeHtml(p.display_name)+(p.user_id===currentUser?.id?'（你）':'')+'</span><span>'+fmt(p.money)+' · '+Number(p.clicks).toLocaleString()+' 點</span></div>').join(""):'<div class="small-copy">房間目前沒有玩家。</div>';}catch(e){$("roomMessage").textContent="讀取房間成員失敗："+(e.message||"")}}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-async function syncRoomScore(){if(!activeRoom||!currentUser||!supabase)return;try{const {error}=await supabase.from("fries_multiplayer_players").upsert({room_code:activeRoom,user_id:currentUser.id,display_name:(state.playerName||currentUser.email?.split("@")[0]||"店長").slice(0,20),money:Math.floor(state.money),clicks:Math.floor(state.clicks),updated_at:new Date().toISOString()},{onConflict:"room_code,user_id"});if(error)throw error;}catch(e){console.warn("Room score sync failed",e)}}
-async function leaveRoom(showMessage=true){clearInterval(roomSyncTimer);roomSyncTimer=null;if(activeRoom&&currentUser&&supabase){try{await supabase.from("fries_multiplayer_players").delete().eq("room_code",activeRoom).eq("user_id",currentUser.id)}catch(e){console.warn(e)}}if(roomChannel&&supabase){try{await supabase.removeChannel(roomChannel)}catch(e){}}roomChannel=null;activeRoom=null;if($("roomCodeLabel"))$("roomCodeLabel").textContent="尚未加入";if($("roomPlayers"))$("roomPlayers").innerHTML='<div class="small-copy">登入後建立或加入房間即可開始多人連線。</div>';if(showMessage&&$("roomMessage"))$("roomMessage").textContent="已離開房間。"}
-$("createRoomBtn").addEventListener("click",createRoom);$("joinRoomBtn").addEventListener("click",joinRoom);$("leaveRoomBtn").addEventListener("click",()=>leaveRoom(true));
-
-let last=Date.now(),saveAccumulator=0;
-setInterval(()=>{const now=Date.now(),dt=Math.min(2,(now-last)/1000);last=now;if(state.timerRunning&&state.remaining>0){state.remaining=Math.max(0,state.remaining-dt);if(autoIncome()>0){const gain=autoIncome()*dt;state.money+=gain;state.lifetime+=gain}if(state.remaining<=0){state.timerRunning=false;showToast("本輪營業結束！重設計時器可繼續自動收益。")}}saveAccumulator+=dt;if(saveAccumulator>=5){saveAccumulator=0;saveLocal()}render()},250);
-document.addEventListener("visibilitychange",()=>{if(document.hidden)saveLocal()});window.addEventListener("beforeunload",saveLocal);
-loadLocal();render();setupSupabase();
-</script>
-</body>
-</html>
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js';
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+const SUPABASE_URL="https://pmdbdckspefacykvfvbq.supabase.co", SUPABASE_ANON_KEY="sb_publishable_R1p34EuAIB00lCGvu-CgtA_bX_lBPw9";
+const supabase=createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+const $=id=>document.getElementById(id);
+let user=null,room=null,roomChannel=null,saveTimer=null,playerTimer=null,autoTimer=null;
+let state={money:0,clicks:0,power:1,auto:0,shop:1,px:0,pz:0};
+const moneyFmt=n=>Math.floor(n).toLocaleString('zh-TW');
+function toast(s){$('toast').textContent=s;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),1800)}
+function costs(){return {power:Math.floor(20*Math.pow(1.75,state.power-1)),auto:Math.floor(80*Math.pow(1.8,state.auto)),shop:Math.floor(200*Math.pow(2,state.shop-1))}}
+function render(){for(const [id,v] of Object.entries({money:moneyFmt(state.money),clicks:moneyFmt(state.clicks),power:state.power}))$(id).textContent=v;const c=costs();$('powerCost').textContent='· '+moneyFmt(c.power)+' 幣';$('autoCost').textContent='· '+moneyFmt(c.auto)+' 幣';$('shopCost').textContent='· '+moneyFmt(c.shop)+' 幣'}
+function saveLocal(){try{localStorage.setItem('fries3d',JSON.stringify(state))}catch{}scheduleSave()}
+function scheduleSave(){if(!user)return;clearTimeout(saveTimer);saveTimer=setTimeout(saveCloud,900)}
+async function saveCloud(){if(!user)return;const {error}=await supabase.from('fries_game_saves').upsert({user_id:user.id,state,updated_at:new Date().toISOString()},{onConflict:'user_id'});if(error)toast('雲端存檔失敗：'+error.message);else toast('☁️ 雲端存檔成功')}
+async function loadCloud(){const {data,error}=await supabase.from('fries_game_saves').select('state').eq('user_id',user.id).maybeSingle();if(error){toast('讀取雲端存檔失敗');return}if(data?.state){state={...state,...data.state};player.position.set(state.px||0,0.8,state.pz||0);toast('已載入雲端進度')}else{try{const l=JSON.parse(localStorage.getItem('fries3d')||'null');if(l)state={...state,...l}}catch{}toast('歡迎來到薯條島！')}render();saveLocal()}
+async function enter(u){user=u;$('authShell').classList.add('hidden');$('hud').classList.remove('hidden');await loadCloud();if(autoTimer)clearInterval(autoTimer);autoTimer=setInterval(()=>{if(state.auto>0){state.money+=state.auto;render();saveLocal()}},5000)}
+$('authForm').addEventListener('submit',async e=>{e.preventDefault();$('authMsg').textContent='正在登入…';const {data,error}=await supabase.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error){$('authMsg').textContent=error.message;return}await enter(data.user)});
+$('signupBtn').onclick=async()=>{const email=$('email').value.trim(),password=$('password').value;if(!email||password.length<6){$('authMsg').textContent='請輸入有效電子郵件與至少 6 位密碼';return}$('authMsg').textContent='正在建立帳號…';const {data,error}=await supabase.auth.signUp({email,password,options:{emailRedirectTo:location.origin}});if(error){$('authMsg').textContent=error.message;return}if(data.session)await enter(data.user);else $('authMsg').textContent='註冊成功！請到信箱驗證，再回到本遊戲登入。驗證信應導回 '+location.origin};
+$('resetBtn').onclick=async()=>{const email=$('email').value.trim();if(!email){$('authMsg').textContent='請先輸入電子郵件';return}const {error}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:location.origin});$('authMsg').textContent=error?error.message:'已寄出重設密碼信，請檢查信箱。'};
+$('logoutBtn').onclick=async()=>{await leaveRoom();await supabase.auth.signOut();user=null;$('hud').classList.add('hidden');$('authShell').classList.remove('hidden')};
+$('saveBtn').onclick=saveCloud;
+supabase.auth.onAuthStateChange((_event,session)=>{if(session?.user&&!user)enter(session.user)});
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x9be5ff);scene.fog=new THREE.Fog(0x9be5ff,28,85);
+const camera=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,.1,200);const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio,1.8));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;$('game').appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xffffff,0x607c4b,2));const sun=new THREE.DirectionalLight(0xffffff,2.5);sun.position.set(-8,18,9);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);scene.add(sun);
+const mat=(color,roughness=.8)=>new THREE.MeshStandardMaterial({color,roughness});
+const grass=mat(0x6bd17b),sand=mat(0xffd98a),wood=mat(0x9b6037),cream=mat(0xffefc4),red=mat(0xff5b5b),blue=mat(0x4a90e2),white=mat(0xffffff),dark=mat(0x332b3d),yellow=mat(0xffc83d),gold=mat(0xf5a623);
+function box(w,h,d,m,x,y,z){const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;scene.add(o);return o}
+const ground=new THREE.Mesh(new THREE.CylinderGeometry(32,34,1.2,64),grass);ground.position.y=-.65;ground.receiveShadow=true;scene.add(ground);
+const beach=new THREE.Mesh(new THREE.CylinderGeometry(33,35,.4,64),sand);beach.position.y=-.9;scene.add(beach);
+const water=new THREE.Mesh(new THREE.CylinderGeometry(42,43,.5,64),new THREE.MeshStandardMaterial({color:0x28b9e8,roughness:.35,metalness:.05}));water.position.y=-1.35;scene.add(water);
+// stylized low-poly trees around the island
+for(let i=0;i<36;i++){const a=i*Math.PI*2/36,r=24+(i%3)*2,x=Math.cos(a)*r,z=Math.sin(a)*r;box(.5,2,.5,wood,x,.5,z);const crown=new THREE.Mesh(new THREE.ConeGeometry(1.5,3,6),mat(i%2?0x219653:0x36b96b));crown.position.set(x,2.4,z);crown.castShadow=true;scene.add(crown)}
+// fry shop
+box(8,3,5,cream,0,1.2,-8);box(8.5,.5,5.5,red,0,3,-8);box(5,.45,.3,red,0,2.2,-5.42);box(3,1.2,.25,white,0,1.45,-5.38);box(2,.35,.3,dark,0,1.6,-5.2);
+const awning=box(8,.35,1.5,red,0,2.9,-4.5);awning.rotation.x=-.1;
+for(let i=-3;i<=3;i+=1.5)box(.5,.4,1.55,white,i,2.9,-4.5);
+const sign=box(4,.9,.25,yellow,0,4,-8);const signCanvas=document.createElement('canvas');signCanvas.width=512;signCanvas.height=128;const ctx=signCanvas.getContext('2d');ctx.fillStyle='#ffc83d';ctx.fillRect(0,0,512,128);ctx.fillStyle='#54233b';ctx.font='bold 56px sans-serif';ctx.textAlign='center';ctx.fillText('FRIES TYCOON',256,82);const tex=new THREE.CanvasTexture(signCanvas);const signFace=new THREE.Mesh(new THREE.PlaneGeometry(3.8,.8),new THREE.MeshBasicMaterial({map:tex}));signFace.position.set(0,4,-7.84);scene.add(signFace);
+box(2.3,1.2,1.8,wood,0,.25,-2.8);box(2.4,.25,1.9,gold,0,.95,-2.8);
+// character
+const player=new THREE.Group();scene.add(player);const body=new THREE.Mesh(new THREE.BoxGeometry(.8,1,.45),blue);body.position.y=1.15;body.castShadow=true;player.add(body);const head=new THREE.Mesh(new THREE.BoxGeometry(.68,.68,.68),mat(0xffd4a6));head.position.y=2;head.castShadow=true;player.add(head);const hair=new THREE.Mesh(new THREE.BoxGeometry(.72,.22,.72),dark);hair.position.y=2.37;player.add(hair);const eyeMat=new THREE.MeshBasicMaterial({color:0x241b35});for(const x of [-.16,.16]){const eye=new THREE.Mesh(new THREE.BoxGeometry(.07,.08,.03),eyeMat);eye.position.set(x,2.03,.35);player.add(eye)}for(const x of [-.25,.25]){const leg=new THREE.Mesh(new THREE.BoxGeometry(.24,.65,.28),dark);leg.position.set(x,.35,0);player.add(leg);const arm=new THREE.Mesh(new THREE.BoxGeometry(.22,.7,.25),mat(0xffd4a6));arm.position.set(x*2,1.18,0);player.add(arm)}
+// floating collectible fries
+const fries=[];function makeFries(x,y,z){const g=new THREE.Group();const cup=new THREE.Mesh(new THREE.BoxGeometry(.65,.55,.45),red);cup.position.y=0;g.add(cup);for(let i=0;i<5;i++){const f=new THREE.Mesh(new THREE.BoxGeometry(.11,.62,.1),yellow);f.position.set((i-2)*.12,.48,0);f.rotation.z=(i-2)*.05;g.add(f)}g.position.set(x,y,z);g.userData.baseY=y;scene.add(g);fries.push(g)}
+for(let i=0;i<12;i++){const a=i*Math.PI*2/12,r=6+(i%3)*2;makeFries(Math.cos(a)*r,.9,Math.sin(a)*r)}
+function spawnFries(){if(fries.length<18){const a=Math.random()*Math.PI*2,r=4+Math.random()*15;makeFries(Math.cos(a)*r,.9,Math.sin(a)*r)}}
+let yaw=0,move={forward:false,back:false,left:false,right:false},drag=null,keys={};
+function updateMove(dt){let dx=0,dz=0;if(move.forward||keys.KeyW||keys.ArrowUp)dz-=1;if(move.back||keys.KeyS||keys.ArrowDown)dz+=1;if(move.left||keys.KeyA||keys.ArrowLeft)dx-=1;if(move.right||keys.KeyD||keys.ArrowRight)dx+=1;if(dx||dz){const len=Math.hypot(dx,dz);dx/=len;dz/=len;const rx=dx*Math.cos(yaw)+dz*Math.sin(yaw),rz=-dx*Math.sin(yaw)+dz*Math.cos(yaw);player.position.x=THREE.MathUtils.clamp(player.position.x+rx*dt*6,-27,27);player.position.z=THREE.MathUtils.clamp(player.position.z+rz*dt*6,-27,27);player.rotation.y=Math.atan2(rx,rz)}state.px=player.position.x;state.pz=player.position.z}
+function collect(){const p=player.position;let best=null,dist=2.8;for(const f of fries){const d=f.position.distanceTo(new THREE.Vector3(p.x,.9,p.z));if(d<dist){dist=d;best=f}}if(best){scene.remove(best);fries.splice(fries.indexOf(best),1);state.money+=state.power;state.clicks++;render();saveLocal();spawnFries();if(room)syncPlayer();toast('+'+state.power+' 薯條幣 🍟')}else{state.money+=state.power;state.clicks++;render();saveLocal();toast('+'+state.power+' 薯條幣')} }
+renderer.domElement.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,moved:false};renderer.domElement.setPointerCapture?.(e.pointerId)});
+renderer.domElement.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.lastX,dy=e.clientY-drag.lastY;if(Math.abs(e.clientX-drag.x)+Math.abs(e.clientY-drag.y)>4)drag.moved=true;if(drag.moved){yaw-=dx*.006;camera.position.y=THREE.MathUtils.clamp(camera.position.y+dy*.025,4,15)}drag.lastX=e.clientX;drag.lastY=e.clientY});
+renderer.domElement.addEventListener('pointerup',()=>{if(drag&&!drag.moved)collect();drag=null});
+document.querySelectorAll('[data-move]').forEach(b=>{const k=b.dataset.move;const on=e=>{e.preventDefault();move[k]=true};const off=e=>{e.preventDefault();move[k]=false};b.addEventListener('pointerdown',on);b.addEventListener('pointerup',off);b.addEventListener('pointercancel',off);b.addEventListener('pointerleave',off)});
+addEventListener('keydown',e=>{keys[e.code]=true;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','Space'].includes(e.code))e.preventDefault()});addEventListener('keyup',e=>keys[e.code]=false);
+$('lookLeft').onclick=()=>yaw+=.3;$('lookRight').onclick=()=>yaw-=.3;$('collectTouch').onclick=collect;
+$('buyPower').onclick=()=>{const c=costs().power;if(state.money<c)return toast('薯條幣不足！');state.money-=c;state.power++;render();saveLocal();toast('升級成功！')};
+$('buyAuto').onclick=()=>{const c=costs().auto;if(state.money<c)return toast('薯條幣不足！');state.money-=c;state.auto++;render();saveLocal();toast('自動炸鍋升級！')};
+$('buyShop').onclick=()=>{const c=costs().shop;if(state.money<c)return toast('薯條幣不足！');state.money-=c;state.shop++;render();const s=1+(state.shop-1)*.12;scene.scale.setScalar(Math.min(1.35,s));saveLocal();toast('店面擴建成功！')};
+async function syncPlayer(){if(!user||!room)return;await supabase.from('fries_multiplayer_players').upsert({room_code:room,user_id:user.id,display_name:user.email?.split('@')[0]||'玩家',money:Math.floor(state.money),clicks:state.clicks,updated_at:new Date().toISOString()},{onConflict:'room_code,user_id'});const {data}=await supabase.from('fries_multiplayer_players').select('display_name,money,clicks').eq('room_code',room).order('money',{ascending:false});$('players').innerHTML=(data||[]).map(p=>'<div>👤 '+escapeHtml(p.display_name)+' · 🍟 '+moneyFmt(p.money)+'</div>').join('')}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+async function join(code,create=false){if(!user)return;if(create){code=Math.random().toString(36).slice(2,8).toUpperCase();const {error}=await supabase.from('fries_multiplayer_rooms').insert({room_code:code,host_id:user.id,room_name:'薯條島 '+code});if(error)return toast('建立房間失敗：'+error.message)}else{const {data,error}=await supabase.from('fries_multiplayer_rooms').select('room_code').eq('room_code',code).maybeSingle();if(error||!data)return toast('找不到這個房間')}
+await leaveRoom();room=code;$('roomText').textContent='房間代碼：'+code;$('roomCode').value=code;await syncPlayer();roomChannel=supabase.channel('fries-room-'+code).on('postgres_changes',{event:'*',schema:'public',table:'fries_multiplayer_players',filter:'room_code=eq.'+code},()=>syncPlayer()).subscribe();playerTimer=setInterval(syncPlayer,5000);toast('已加入多人房間 '+code)}
+async function leaveRoom(){if(playerTimer)clearInterval(playerTimer);playerTimer=null;if(roomChannel){await supabase.removeChannel(roomChannel);roomChannel=null}if(user&&room)await supabase.from('fries_multiplayer_players').delete().eq('room_code',room).eq('user_id',user.id);room=null;$('roomText').textContent='尚未加入房間';$('players').textContent=''}
+$('createRoom').onclick=()=>join('',true);$('joinRoom').onclick=()=>join($('roomCode').value.trim().toUpperCase());window.addEventListener('beforeunload',()=>{if(user)saveCloud()});
+let last=performance.now();function animate(now){requestAnimationFrame(animate);const dt=Math.min((now-last)/1000,.05);last=now;updateMove(dt);const t=now*.001;fries.forEach((f,i)=>{f.position.y=f.userData.baseY+Math.sin(t*2+i)*.16;f.rotation.y=t*.55+i});const target=new THREE.Vector3(player.position.x,1.1,player.position.z);const offset=new THREE.Vector3(Math.sin(yaw)*10,6+((camera.position.y-6)*.12),Math.cos(yaw)*10);camera.position.lerp(target.clone().add(offset),.08);camera.lookAt(target);renderer.render(scene,camera)}
+requestAnimationFrame(animate);addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+render();
+const {data:{session}}=await supabase.auth.getSession();if(session?.user)await enter(session.user);
+</script></body></html>
