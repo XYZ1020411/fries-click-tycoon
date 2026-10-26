@@ -15,13 +15,29 @@ button,input{font:inherit}button{cursor:pointer;touch-action:manipulation}button
 .right-column{display:grid;gap:18px}.panel-head{display:flex;align-items:center;justify-content:space-between;padding:20px 20px 12px;gap:10px}.panel-head h2{font-size:17px;margin:0;font-weight:1000}.panel-head p{margin:4px 0 0;color:var(--muted);font-size:11px;font-weight:700}.tag{font-size:10px;font-weight:900;color:#805200;background:#fff0bd;border-radius:999px;padding:6px 9px;white-space:nowrap}.shop-list{padding:0 12px 14px;display:grid;gap:9px}.shop-item{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px;border:1px solid #eeeaf6;background:#ffffffb5;border-radius:17px;transition:transform .18s,border-color .18s,box-shadow .18s}.shop-item:hover{transform:translateY(-2px);border-color:#ffc86a;box-shadow:0 8px 18px #39285c0c}.shop-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#fff0c1,#ffe0a0);font-size:24px}.shop-name{font-size:13px;font-weight:1000}.shop-desc{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.4}.shop-level{font-size:10px;font-weight:900;color:#7c7394;margin-top:4px}.buy-btn{border:0;border-radius:12px;background:linear-gradient(135deg,#ffb703,#ff8a00);color:#4d2c00;font-size:11px;font-weight:1000;padding:10px 11px;box-shadow:0 4px 0 #d86d00;min-width:80px;transition:transform .15s,filter .15s}.buy-btn:hover{filter:brightness(1.06);transform:translateY(-1px)}.buy-btn:active{transform:translateY(2px);box-shadow:0 2px 0 #d86d00}.buy-btn:disabled{filter:grayscale(.8);opacity:.55;cursor:not-allowed;transform:none}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.timer-content{padding:0 20px 20px}.timer-display{font-size:29px;font-weight:1000;letter-spacing:1px;margin:3px 0 12px}.timer-track{height:10px;border-radius:99px;background:#ebe7f4;overflow:hidden}.timer-bar{height:100%;width:100%;border-radius:99px;background:linear-gradient(90deg,#6c63ff,#ff4d8d);transition:width .3s}.timer-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.secondary-btn{border:1px solid #e7e0f1;background:#fff;border-radius:12px;padding:9px 13px;font-size:11px;font-weight:900;color:var(--ink);transition:transform .15s,background .15s}.secondary-btn:hover{transform:translateY(-1px);background:#fff8e9}.secondary-btn.primary{background:#6c63ff;color:white;border-color:#6c63ff}.small-copy{font-size:11px;color:var(--muted);line-height:1.6}.leaderboard{padding:0 18px 18px}.leader-row{display:flex;align-items:center;justify-content:space-between;padding:10px 2px;border-bottom:1px solid #eeeaf4;font-size:12px;font-weight:800}.leader-row:last-child{border:0}.rank{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:9px;background:#f1edff;margin-right:8px}.player-form{display:flex;gap:7px;margin-top:10px}.player-form input{width:100%;min-width:0;border:1px solid #e6e0f0;background:#fff;border-radius:12px;padding:10px 12px;font-size:12px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#27223b;color:white;padding:12px 17px;border-radius:14px;box-shadow:0 12px 30px #20163233;font-size:12px;font-weight:900;z-index:1200;transition:.25s;max-width:calc(100vw - 32px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.footer{text-align:center;color:#9993aa;font-size:10px;font-weight:700;margin:20px 0 0}.hidden{display:none!important}
 @keyframes jelly{0%{transform:scale(1) rotate(0)}22%{transform:scale(1.13,.86) rotate(-7deg)}42%{transform:scale(.88,1.12) rotate(5deg)}62%{transform:scale(1.06,.96) rotate(-2deg)}80%{transform:scale(.98,1.02) rotate(1deg)}100%{transform:scale(1) rotate(0)}}@keyframes floatUp{0%{opacity:0;transform:translate(-50%,-4px) scale(.75) rotate(-5deg)}12%{opacity:1}75%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--drift,0px)),-105px) scale(1.16) rotate(var(--rot,8deg)}}@keyframes spark{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(140deg) scale(.15)}}@keyframes ring{0%{transform:scale(.92);opacity:.8}100%{transform:scale(1.16);opacity:0}}@keyframes orbit{to{transform:rotate(360deg)}}@keyframes glow{0%{filter:brightness(1)}45%{filter:brightness(1.2) saturate(1.4)}100%{filter:brightness(1)}}@media(max-width:780px){.app{padding:14px 12px 30px}.layout{grid-template-columns:1fr}.click-panel{min-height:440px}.fries-wrap{width:200px;height:200px}.fries-btn{width:170px;height:170px}.fries-btn .emoji{font-size:90px}.right-column{grid-template-columns:1fr 1fr;align-items:start}.right-column .panel:first-child{grid-column:1/-1}.bottom-grid{margin-top:14px}}@media(max-width:520px){.stats{gap:7px}.stat{padding:12px 10px;border-radius:15px}.stat-label{font-size:10px}.stat-value{font-size:20px}.topbar{align-items:flex-start}.status{font-size:10px;padding:8px}.brand{gap:9px}.logo{width:45px;height:45px;border-radius:15px;font-size:24px}.subtitle{font-size:10px}.click-panel{min-height:410px;padding:22px 12px}.right-column{grid-template-columns:1fr}.right-column .panel:first-child{grid-column:auto}.bottom-grid{grid-template-columns:1fr}.shop-item{grid-template-columns:44px minmax(0,1fr) auto;padding:10px}.shop-icon{width:42px;height:42px}.buy-btn{min-width:72px;padding:9px 8px}.panel-head{padding:17px 16px 11px}.shop-list{padding:0 10px 12px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+.auth-shell{max-width:520px;margin:8vh auto 28px;padding:0 16px;position:relative}.auth-card{background:#ffffffed;border:1px solid #fff;border-radius:26px;padding:26px;box-shadow:0 18px 50px #4b2e4c22}.auth-card h2{margin:0 0 8px;font-size:24px}.auth-card p{color:#77758b;font-size:13px;line-height:1.6}.auth-form{display:grid;gap:11px;margin-top:18px}.auth-form input,.room-form input{width:100%;min-width:0;border:1px solid #e6e0f0;background:#fff;border-radius:12px;padding:12px;font-size:14px}.auth-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.auth-btn{border:0;border-radius:12px;padding:12px;background:linear-gradient(135deg,#ffb703,#ff8a00);font-weight:900;color:#4d2c00}.auth-btn.alt{background:#6c63ff;color:white}.auth-btn:disabled{opacity:.6}.auth-message{font-size:12px;color:#6c63ff;min-height:18px;overflow-wrap:anywhere}.account-pill{display:flex;align-items:center;gap:8px}.account-pill button{border:1px solid #e7e0f1;background:white;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900}.multiplayer{margin-top:18px}.room-content{padding:0 18px 18px}.room-form{display:flex;gap:8px;flex-wrap:wrap}.room-form input{flex:1;min-width:130px}.room-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.room-list{display:grid;gap:8px;margin-top:12px}.room-player{display:flex;justify-content:space-between;gap:10px;padding:9px 11px;background:#ffffffb5;border:1px solid #eeeaf6;border-radius:12px;font-size:12px;font-weight:800}.room-code{font-weight:1000;color:#6c63ff;letter-spacing:2px;font-size:19px}.room-note{font-size:11px;color:#77758b;line-height:1.6;margin-top:10px}
 </style>
 </head>
 <body>
-<div class="app">
+<section class="auth-shell" id="authShell">
+  <div class="auth-card">
+    <div class="brand"><div class="logo">🍟</div><div><h1>薯條點擊大亨</h1><div class="subtitle">帳號登入 · 雲端存檔 · 多人連線</div></div></div>
+    <h2 style="margin-top:24px">登入你的薯條帝國</h2>
+    <p>必須使用電子郵件與密碼登入或註冊。登入後可在不同裝置繼續遊玩、儲存進度，並和朋友加入同一個房間競賽。</p>
+    <form class="auth-form" id="authForm">
+      <input id="authEmail" type="email" autocomplete="email" required placeholder="電子郵件">
+      <input id="authPassword" type="password" autocomplete="current-password" minlength="6" required placeholder="密碼（至少 6 個字元）">
+      <div class="auth-actions"><button class="auth-btn alt" type="submit" id="loginBtn">登入</button><button class="auth-btn" type="button" id="signupBtn">建立帳號</button></div>
+      <button class="secondary-btn" type="button" id="resetPasswordBtn">忘記密碼？寄送重設信</button>
+      <div class="auth-message" id="authMessage" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+<div class="app" id="appShell" style="display:none">
 <header class="topbar">
   <div class="brand"><div class="logo">🍟</div><div><h1>薯條點擊大亨</h1><div class="subtitle">FRIES TYCOON · 點出你的薯條帝國</div></div></div>
-  <div class="status"><span class="dot"></span><span id="cloudStatus">本機存檔已啟用</span></div>
+  <div class="account-pill"><div class="status"><span class="dot"></span><span id="cloudStatus">登入中</span></div><button id="logoutBtn">登出</button></div>
 </header>
 <section class="stats">
   <div class="stat"><div class="stat-label">🪙 薯條基金</div><div class="stat-value" id="money">$0</div></div>
@@ -68,7 +84,18 @@ button,input{font:inherit}button{cursor:pointer;touch-action:manipulation}button
     </div>
   </section>
 </section>
-<div class="footer">薯條點擊大亨 · 你的每一次點擊都很有價值 🍟</div>
+
+<section class="panel multiplayer">
+  <div class="panel-head"><div><h2>👥 多人薯條派對</h2><p>建立房間或輸入朋友的房間代碼，實時比較營收</p></div><span class="tag">ONLINE</span></div>
+  <div class="room-content">
+    <div>目前房間： <span class="room-code" id="roomCodeLabel">尚未加入</span></div>
+    <div class="room-form" style="margin-top:12px"><input id="roomNameInput" maxlength="30" placeholder="房間名稱（建立時使用）"><button class="secondary-btn primary" id="createRoomBtn">＋ 建立房間</button></div>
+    <div class="room-form" style="margin-top:8px"><input id="joinRoomInput" maxlength="6" placeholder="輸入 6 位房間代碼" autocapitalize="characters"><button class="secondary-btn" id="joinRoomBtn">加入房間</button><button class="secondary-btn" id="leaveRoomBtn">離開房間</button></div>
+    <div class="room-list" id="roomPlayers"><div class="small-copy">登入後建立或加入房間即可開始多人連線。</div></div>
+    <div class="room-note" id="roomMessage">房間成員分數會透過 Supabase Realtime 更新。多人功能需要網路連線。</div>
+  </div>
+</section>
+<div class="footer">薯條點擊大亨 · 登入存檔 · 與朋友一起競賽 🍟</div>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script type="module">
@@ -80,7 +107,7 @@ button,input{font:inherit}button{cursor:pointer;touch-action:manipulation}button
  */
 const SUPABASE_URL = "https://pmdbdckspefacykvfvbq.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_R1p34EuAIB00lCGvu-CgtA_bX_lBPw9";
-const SAVE_KEY = "fries-tycoon-save-v1";
+const SAVE_KEY = "fries-tycoon-save-v2";
 const START_TIME = 300;
 const products = [
  {id:"better-potato",name:"優質馬鈴薯",desc:"每次點擊額外 +$1",icon:"🥔",base:25,scale:1.48,type:"click",amount:1},
@@ -93,6 +120,12 @@ const products = [
 const fresh = () => ({money:0,clicks:0,lifetime:0,levels:{},remaining:START_TIME,timerRunning:true,playerName:""});
 let state = fresh();
 let toastTimer;
+let currentUser = null;
+let cloudSaveTimer = null;
+let activeRoom = null;
+let roomChannel = null;
+let roomSyncTimer = null;
+let lastCloudSaveAt = 0;
 const $ = id => document.getElementById(id);
 const fmt = n => "$" + Math.floor(n).toLocaleString("en-US");
 const totalLevels = () => products.reduce((s,p)=>s+(state.levels[p.id]||0),0);
@@ -100,7 +133,11 @@ const clickPower = () => 1 + products.filter(p=>p.type==="click").reduce((s,p)=>
 const autoIncome = () => products.filter(p=>p.type==="auto").reduce((s,p)=>s+(state.levels[p.id]||0)*p.amount,0);
 const costFor = p => Math.floor(p.base * Math.pow(p.scale,state.levels[p.id]||0));
 function showToast(msg){const t=$("toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200)}
-function saveLocal(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(state));}catch(e){console.warn("Local save unavailable",e)}}
+function saveLocal(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(state));}catch(e){console.warn("Local save unavailable",e)}scheduleCloudSave()}
+function scheduleCloudSave(){if(!currentUser||!supabase)return;clearTimeout(cloudSaveTimer);cloudSaveTimer=setTimeout(()=>saveCloudState(false),1100)}
+async function saveCloudState(showMessage=false){if(!currentUser||!supabase)return;try{const snapshot={...state,levels:{...state.levels}};const {error}=await supabase.from("fries_game_saves").upsert({user_id:currentUser.id,state:snapshot,updated_at:new Date().toISOString()},{onConflict:"user_id"});if(error)throw error;lastCloudSaveAt=Date.now();if(showMessage)showToast("雲端存檔成功 ☁️")}catch(e){console.error(e);if(showMessage)showToast("雲端存檔失敗，請檢查網路");}}
+async function loadCloudState(){if(!currentUser||!supabase)return;try{const {data,error}=await supabase.from("fries_game_saves").select("state").eq("user_id",currentUser.id).maybeSingle();if(error)throw error;if(data&&data.state&&typeof data.state==="object"){const cloud=data.state;state={...fresh(),...cloud,levels:{...fresh().levels,...(cloud.levels||{})}};state.money=Math.max(0,Number(state.money)||0);state.remaining=Math.max(0,Math.min(START_TIME,Number(state.remaining)||0));state.clicks=Math.max(0,Number(state.clicks)||0);state.lifetime=Math.max(0,Number(state.lifetime)||0);saveLocal();render();$("syncMessage").textContent="已載入雲端存檔。";}else{await saveCloudState(false);$("syncMessage").textContent="已建立你的第一份雲端存檔。"}}catch(e){console.error(e);$("syncMessage").textContent="載入雲端存檔失敗："+(e.message||"請稍後重試")}}
+function showLoggedIn(user){currentUser=user;$("authShell").style.display="none";$("appShell").style.display="block";$("cloudStatus").textContent=user.email||"已登入";$("syncMessage").textContent="帳號已登入，雲端存檔啟用中。";loadCloudState();if(activeRoom)refreshRoomPlayers();}
 function loadLocal(){try{const raw=localStorage.getItem(SAVE_KEY);if(raw){const parsed=JSON.parse(raw);state={...fresh(),...parsed,levels:{...fresh().levels,...parsed.levels}};state.money=Math.max(0,Number(state.money)||0);state.remaining=Math.max(0,Math.min(START_TIME,Number(state.remaining)||0));state.clicks=Math.max(0,Number(state.clicks)||0);state.lifetime=Math.max(0,Number(state.lifetime)||0)}}catch(e){state=fresh()}}
 function renderShop(){
  $("shopList").innerHTML=products.map(p=>{const level=state.levels[p.id]||0,cost=costFor(p);return `<article class="shop-item"><div class="shop-icon">${p.icon}</div><div><div class="shop-name">${p.name}</div><div class="shop-desc">${p.desc}</div><div class="shop-level">擁有 Lv.${level}</div></div><button class="buy-btn" data-buy="${p.id}" ${state.money<cost?"disabled":""}>${fmt(cost)}<br><small>購買</small></button></article>`}).join("");
@@ -120,27 +157,28 @@ function clickFries(e){const value=clickPower();state.money+=value;state.lifetim
 $("friesBtn").addEventListener("pointerdown",clickFries);
 $("timerToggle").addEventListener("click",()=>{if(state.remaining<=0&&!state.timerRunning){showToast("時間已到，請按重設重新營業");return}state.timerRunning=!state.timerRunning;saveLocal();render()});
 $("timerReset").addEventListener("click",()=>{state.remaining=START_TIME;state.timerRunning=true;saveLocal();render();showToast("新一輪營業開始！")});
-$("saveBtn").addEventListener("click",()=>{saveLocal();showToast("遊戲進度已儲存到此裝置 💾")});
+$("saveBtn").addEventListener("click",async()=>{saveLocal();await saveCloudState(true);showToast("遊戲進度已儲存 💾")});
 $("playerName").addEventListener("change",e=>{state.playerName=e.target.value.trim().slice(0,20);saveLocal()});
 let supabase=null;
-async function setupSupabase(){if(!SUPABASE_URL||!SUPABASE_ANON_KEY){$("cloudStatus").textContent="本機存檔已啟用";return}try{const {createClient}=await import("https://esm.sh/@supabase/supabase-js@2.57.0");supabase=createClient(SUPABASE_URL,SUPABASE_ANON_KEY);$("cloudStatus").textContent="雲端連線就緒";$("syncMessage").textContent="已連接 Supabase。輸入暱稱後按同步即可上傳分數。"}catch(e){console.error(e);$("cloudStatus").textContent="本機存檔模式";$("syncMessage").textContent="雲端套件載入失敗，遊戲仍可正常本機遊玩。"}}
-async function syncCloud(){
- state.playerName=$("playerName").value.trim().slice(0,20);saveLocal();
- if(!supabase){showToast("尚未設定 Supabase，進度已保存在本機");$("syncMessage").textContent="請依 README 設定 Supabase URL 與 publishable/anon key。";return}
- if(!state.playerName){showToast("請先輸入店長暱稱");$("playerName").focus();return}
- $("syncBtn").disabled=true;$("syncMessage").textContent="正在同步…";
- try{
-  const {data:{user},error:authError}=await supabase.auth.getUser();if(authError)throw authError;
-  // Anonymous public score submission is intentionally disabled by default.
-  // This safe starter requires an authenticated user before writing a score.
-  if(!user){const {error}=await supabase.auth.signInAnonymously();if(error)throw new Error("請在 Supabase Authentication 開啟 Anonymous Sign-ins 後再同步");}
-  const {data:{user:current},error:userErr}=await supabase.auth.getUser();if(userErr||!current)throw userErr||new Error("登入狀態無法確認");
-  const payload={user_id:current.id,display_name:state.playerName,score:Math.floor(state.lifetime),total_clicks:Math.floor(state.clicks),upgrades:Math.floor(totalLevels()),updated_at:new Date().toISOString()};
-  const {error}=await supabase.from("fries_scores").upsert(payload,{onConflict:"user_id"});if(error)throw error;
-  $("syncMessage").textContent="雲端紀錄同步成功！";showToast("雲端紀錄同步成功 ☁️");
- }catch(e){console.error(e);$("syncMessage").textContent="同步未完成："+(e.message||"請檢查設定");showToast("同步失敗，已保留本機存檔")}finally{$("syncBtn").disabled=false}
-}
+async function setupSupabase(){try{const {createClient}=await import("https://esm.sh/@supabase/supabase-js@2.57.0");supabase=createClient(SUPABASE_URL,SUPABASE_ANON_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});const {data:{session}}=await supabase.auth.getSession();if(session?.user)showLoggedIn(session.user);else{$("authShell").style.display="block";$("appShell").style.display="none";$("authMessage").textContent="請登入或建立帳號後遊玩。"}supabase.auth.onAuthStateChange((event,session)=>{if(session?.user){if(!currentUser||currentUser.id!==session.user.id)showLoggedIn(session.user)}else{currentUser=null;leaveRoom(false);$("authShell").style.display="block";$("appShell").style.display="none";$("cloudStatus").textContent="未登入"}});$("cloudStatus").textContent="請登入";}catch(e){console.error(e);$("authMessage").textContent="無法連線到登入服務："+(e.message||"請稍後再試");$("authShell").style.display="block";$("appShell").style.display="none"}}
+async function syncCloud(){state.playerName=$("playerName").value.trim().slice(0,20);saveLocal();if(!currentUser){showToast("請先登入才能同步");return}await saveCloudState(true);await syncRoomScore()}
+
 $("syncBtn").addEventListener("click",syncCloud);
+
+$("authForm").addEventListener("submit",async e=>{e.preventDefault();if(!supabase){showToast("登入服務尚未就緒");return}const email=$("authEmail").value.trim(),password=$("authPassword").value;const btn=$("loginBtn");btn.disabled=true;$("authMessage").textContent="正在登入…";try{const {data,error}=await supabase.auth.signInWithPassword({email,password});if(error)throw error;showLoggedIn(data.user);$("authMessage").textContent="登入成功。"}catch(err){$("authMessage").textContent=err.message||"登入失敗";}finally{btn.disabled=false}});
+$("signupBtn").addEventListener("click",async()=>{if(!supabase){showToast("登入服務尚未就緒");return}const email=$("authEmail").value.trim(),password=$("authPassword").value;if(!email||password.length<6){$("authMessage").textContent="請輸入有效電子郵件及至少 6 個字元的密碼。";return}const btn=$("signupBtn");btn.disabled=true;$("authMessage").textContent="正在建立帳號…";try{const {data,error}=await supabase.auth.signUp({email,password});if(error)throw error;if(data.session&&data.user){showLoggedIn(data.user);$("authMessage").textContent="註冊成功，已登入。"}else{$("authMessage").textContent="註冊成功！請查看電子郵件完成驗證，再回來登入。";}}catch(err){$("authMessage").textContent=err.message||"註冊失敗";}finally{btn.disabled=false}});
+$("resetPasswordBtn").addEventListener("click",async()=>{if(!supabase)return;const email=$("authEmail").value.trim();if(!email){$("authMessage").textContent="請先填寫電子郵件。";return}try{const {error}=await supabase.auth.resetPasswordForEmail(email,{redirectTo:location.origin+location.pathname});if(error)throw error;$("authMessage").textContent="如果該信箱可重設密碼，系統會寄送重設信。"}catch(err){$("authMessage").textContent=err.message||"無法寄送重設信"}});
+$("logoutBtn").addEventListener("click",async()=>{await saveCloudState(false);leaveRoom(false);if(supabase)await supabase.auth.signOut();currentUser=null;$("appShell").style.display="none";$("authShell").style.display="block";$("authMessage").textContent="你已登出。"});
+function makeRoomCode(){const chars="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";let code="";for(let i=0;i<6;i++)code+=chars[Math.floor(Math.random()*chars.length)];return code}
+async function createRoom(){if(!currentUser||!supabase)return;const room_code=makeRoomCode();const room_name=$("roomNameInput").value.trim().slice(0,30)||"薯條派對";$("createRoomBtn").disabled=true;try{const {error}=await supabase.from("fries_multiplayer_rooms").insert({room_code,host_id:currentUser.id,room_name});if(error)throw error;await enterRoom(room_code);$("roomMessage").textContent="房間已建立，把代碼分享給朋友即可加入。";}catch(e){$("roomMessage").textContent="建立房間失敗："+(e.message||"請重試");}finally{$("createRoomBtn").disabled=false}}
+async function joinRoom(){if(!currentUser||!supabase)return;const code=$("joinRoomInput").value.trim().toUpperCase();if(!/^[A-Z0-9]{6}$/.test(code)){$("roomMessage").textContent="請輸入 6 位英數房間代碼。";return}try{const {data,error}=await supabase.from("fries_multiplayer_rooms").select("room_code,room_name").eq("room_code",code).maybeSingle();if(error)throw error;if(!data)throw new Error("找不到房間，請確認代碼");await enterRoom(data.room_code);$("roomMessage").textContent="已加入「"+data.room_name+"」。";}catch(e){$("roomMessage").textContent="加入房間失敗："+(e.message||"請重試")}}
+async function enterRoom(code){leaveRoom(false);activeRoom=code;$("roomCodeLabel").textContent=code;const name=state.playerName||currentUser.email?.split("@")[0]||"店長";const {error}=await supabase.from("fries_multiplayer_players").upsert({room_code:code,user_id:currentUser.id,display_name:name.slice(0,20),money:Math.floor(state.money),clicks:state.clicks,updated_at:new Date().toISOString()},{onConflict:"room_code,user_id"});if(error)throw error;roomChannel=supabase.channel("fries-room-"+code).on("postgres_changes",{event:"*",schema:"public",table:"fries_multiplayer_players",filter:"room_code=eq."+code},()=>refreshRoomPlayers()).subscribe();await refreshRoomPlayers();await syncRoomScore();clearInterval(roomSyncTimer);roomSyncTimer=setInterval(syncRoomScore,4000)}
+async function refreshRoomPlayers(){if(!activeRoom||!supabase)return;try{const {data,error}=await supabase.from("fries_multiplayer_players").select("user_id,display_name,money,clicks,updated_at").eq("room_code",activeRoom).order("money",{ascending:false});if(error)throw error;const players=data||[];$("roomPlayers").innerHTML=players.length?players.map((p,i)=>'<div class="room-player"><span>'+(["🥇","🥈","🥉"][i]||"🍟")+' '+escapeHtml(p.display_name)+(p.user_id===currentUser?.id?'（你）':'')+'</span><span>'+fmt(p.money)+' · '+Number(p.clicks).toLocaleString()+' 點</span></div>').join(""):'<div class="small-copy">房間目前沒有玩家。</div>';}catch(e){$("roomMessage").textContent="讀取房間成員失敗："+(e.message||"")}}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+async function syncRoomScore(){if(!activeRoom||!currentUser||!supabase)return;try{const {error}=await supabase.from("fries_multiplayer_players").upsert({room_code:activeRoom,user_id:currentUser.id,display_name:(state.playerName||currentUser.email?.split("@")[0]||"店長").slice(0,20),money:Math.floor(state.money),clicks:Math.floor(state.clicks),updated_at:new Date().toISOString()},{onConflict:"room_code,user_id"});if(error)throw error;}catch(e){console.warn("Room score sync failed",e)}}
+async function leaveRoom(showMessage=true){clearInterval(roomSyncTimer);roomSyncTimer=null;if(activeRoom&&currentUser&&supabase){try{await supabase.from("fries_multiplayer_players").delete().eq("room_code",activeRoom).eq("user_id",currentUser.id)}catch(e){console.warn(e)}}if(roomChannel&&supabase){try{await supabase.removeChannel(roomChannel)}catch(e){}}roomChannel=null;activeRoom=null;if($("roomCodeLabel"))$("roomCodeLabel").textContent="尚未加入";if($("roomPlayers"))$("roomPlayers").innerHTML='<div class="small-copy">登入後建立或加入房間即可開始多人連線。</div>';if(showMessage&&$("roomMessage"))$("roomMessage").textContent="已離開房間。"}
+$("createRoomBtn").addEventListener("click",createRoom);$("joinRoomBtn").addEventListener("click",joinRoom);$("leaveRoomBtn").addEventListener("click",()=>leaveRoom(true));
+
 let last=Date.now(),saveAccumulator=0;
 setInterval(()=>{const now=Date.now(),dt=Math.min(2,(now-last)/1000);last=now;if(state.timerRunning&&state.remaining>0){state.remaining=Math.max(0,state.remaining-dt);if(autoIncome()>0){const gain=autoIncome()*dt;state.money+=gain;state.lifetime+=gain}if(state.remaining<=0){state.timerRunning=false;showToast("本輪營業結束！重設計時器可繼續自動收益。")}}saveAccumulator+=dt;if(saveAccumulator>=5){saveAccumulator=0;saveLocal()}render()},250);
 document.addEventListener("visibilitychange",()=>{if(document.hidden)saveLocal()});window.addEventListener("beforeunload",saveLocal);
