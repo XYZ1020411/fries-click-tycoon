@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffb703">
+<meta name="description" content="薯條點擊大亨：點擊薯條、升級設備、經營你的薯條帝國！">
+<title>🍟 薯條點擊大亨</title>
+<style>
+:root{--ink:#25223a;--muted:#77758b;--cream:#fff9e9;--orange:#ff7a00;--yellow:#ffca3a;--pink:#ff4d8d;--blue:#6c63ff;--green:#22c55e;--card:rgba(255,255,255,.86);--shadow:0 18px 50px #4b2e4c22}
+*{box-sizing:border-box}html{min-height:100%;background:#fff4d7}body{margin:0;min-height:100vh;font-family:ui-rounded,"Trebuchet MS",system-ui,-apple-system,"Noto Sans TC",sans-serif;color:var(--ink);background:radial-gradient(ellipse at 12% 8%,#ffe7a3 0,transparent 32%),radial-gradient(ellipse at 90% 12%,#ffd3e4 0,transparent 34%),linear-gradient(145deg,#fff8e7,#f1edff 65%,#e5faff);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#ff9f1c 1.5px,transparent 1.5px);background-size:26px 26px;mask-image:linear-gradient(to bottom,#000,transparent 75%)}
+button,input{font:inherit}button{cursor:pointer;touch-action:manipulation}button:focus-visible,input:focus-visible{outline:3px solid #6c63ff;outline-offset:3px}.app{max-width:1180px;margin:auto;padding:22px 18px 42px;position:relative}.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:12px}.logo{display:grid;place-items:center;width:54px;height:54px;border-radius:18px;background:linear-gradient(145deg,#ffcc45,#ff8a00);box-shadow:0 7px 0 #d65b08,0 12px 24px #ff8a0050;font-size:29px;transform:rotate(-5deg)}h1{font-size:clamp(21px,4vw,30px);margin:0;font-weight:1000;letter-spacing:-.8px}.subtitle{font-size:12px;color:var(--muted);font-weight:700;margin-top:3px}.status{border:1px solid #ffffffd9;background:#ffffffa6;border-radius:999px;padding:9px 13px;font-size:12px;font-weight:800;display:flex;align-items:center;gap:7px;white-space:nowrap}.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px #22c55e20}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:18px}.stat{background:var(--card);border:1px solid #fff;border-radius:20px;padding:16px 18px;box-shadow:var(--shadow);backdrop-filter:blur(12px);min-width:0}.stat-label{font-size:12px;color:var(--muted);font-weight:800;display:flex;align-items:center;gap:6px}.stat-value{font-size:clamp(20px,3vw,30px);font-weight:1000;letter-spacing:-1px;margin-top:5px;overflow-wrap:anywhere}.stat-value small{font-size:12px;letter-spacing:0;color:var(--muted);font-weight:800}.layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:18px;align-items:start}.panel{background:var(--card);border:1px solid #fff;border-radius:26px;box-shadow:var(--shadow);backdrop-filter:blur(16px);overflow:hidden}.click-panel{min-height:490px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px 18px 22px;background:linear-gradient(155deg,#fffdf6dd,#ffe7b8cc)}.click-panel:before,.click-panel:after{content:"";position:absolute;border-radius:50%;pointer-events:none}.click-panel:before{width:260px;height:260px;background:#ffca3a32;top:14%;left:calc(50% - 130px)}.click-panel:after{width:320px;height:320px;border:1px dashed #ff9f1c55;top:calc(14% - 30px);left:calc(50% - 160px);animation:orbit 24s linear infinite}.eyebrow{position:relative;z-index:1;text-transform:uppercase;letter-spacing:2px;color:#c46a00;font-size:11px;font-weight:1000}.click-title{position:relative;z-index:1;font-size:clamp(22px,4vw,30px);font-weight:1000;margin:8px 0 2px}.click-hint{position:relative;z-index:1;color:var(--muted);font-size:13px;font-weight:700;margin-bottom:22px;text-align:center}.fries-wrap{position:relative;z-index:2;display:grid;place-items:center;width:220px;height:220px}.fries-btn{position:relative;width:190px;height:190px;border:0;border-radius:50%;background:radial-gradient(circle at 34% 23%,#fff8ca,#ffcb47 58%,#ff9b19);box-shadow:0 12px 0 #d96c0c,0 22px 38px #c56b1b35,inset 0 4px 0 #ffffffb8;display:grid;place-items:center;transition:filter .18s,box-shadow .18s;user-select:none;-webkit-tap-highlight-color:transparent}.fries-btn:hover{filter:saturate(1.12) brightness(1.04);box-shadow:0 14px 0 #d96c0c,0 26px 42px #c56b1b45,inset 0 4px 0 #ffffffc9}.fries-btn:active{transform:scale(.92) rotate(-4deg)}.fries-btn .emoji{font-size:100px;filter:drop-shadow(0 9px 3px #a14d1633);transform:rotate(-7deg);display:block}.fries-btn.bounce{animation:jelly .42s cubic-bezier(.2,1.7,.45,1)}.fries-btn.upgrade-glow{animation:glow .65s ease-out}.ring{position:absolute;inset:-7px;border-radius:50%;border:3px solid #ff9f1c77;animation:ring 1.8s ease-out infinite;pointer-events:none}.ring:nth-child(2){inset:-17px;animation-delay:.6s}.click-value{position:relative;z-index:1;background:#fff;border:1px solid #ffdc9a;border-radius:999px;padding:10px 17px;margin-top:22px;font-size:13px;font-weight:900;box-shadow:0 5px 0 #f3d6a5}.click-value strong{color:#e66b00;font-size:16px}.click-count{position:relative;z-index:1;color:var(--muted);font-size:12px;font-weight:800;margin-top:10px}.float-text{position:fixed;z-index:1000;pointer-events:none;font-size:22px;font-weight:1000;color:#168a48;text-shadow:0 2px #fff,0 4px 0 #ffffff88;animation:floatUp .9s cubic-bezier(.15,.7,.2,1) forwards;white-space:nowrap}.spark{position:fixed;z-index:999;width:8px;height:8px;border-radius:3px;pointer-events:none;animation:spark .65s ease-out forwards}
+.right-column{display:grid;gap:18px}.panel-head{display:flex;align-items:center;justify-content:space-between;padding:20px 20px 12px;gap:10px}.panel-head h2{font-size:17px;margin:0;font-weight:1000}.panel-head p{margin:4px 0 0;color:var(--muted);font-size:11px;font-weight:700}.tag{font-size:10px;font-weight:900;color:#805200;background:#fff0bd;border-radius:999px;padding:6px 9px;white-space:nowrap}.shop-list{padding:0 12px 14px;display:grid;gap:9px}.shop-item{display:grid;grid-template-columns:48px minmax(0,1fr) auto;gap:10px;align-items:center;padding:12px;border:1px solid #eeeaf6;background:#ffffffb5;border-radius:17px;transition:transform .18s,border-color .18s,box-shadow .18s}.shop-item:hover{transform:translateY(-2px);border-color:#ffc86a;box-shadow:0 8px 18px #39285c0c}.shop-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(145deg,#fff0c1,#ffe0a0);font-size:24px}.shop-name{font-size:13px;font-weight:1000}.shop-desc{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.4}.shop-level{font-size:10px;font-weight:900;color:#7c7394;margin-top:4px}.buy-btn{border:0;border-radius:12px;background:linear-gradient(135deg,#ffb703,#ff8a00);color:#4d2c00;font-size:11px;font-weight:1000;padding:10px 11px;box-shadow:0 4px 0 #d86d00;min-width:80px;transition:transform .15s,filter .15s}.buy-btn:hover{filter:brightness(1.06);transform:translateY(-1px)}.buy-btn:active{transform:translateY(2px);box-shadow:0 2px 0 #d86d00}.buy-btn:disabled{filter:grayscale(.8);opacity:.55;cursor:not-allowed;transform:none}.bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.timer-content{padding:0 20px 20px}.timer-display{font-size:29px;font-weight:1000;letter-spacing:1px;margin:3px 0 12px}.timer-track{height:10px;border-radius:99px;background:#ebe7f4;overflow:hidden}.timer-bar{height:100%;width:100%;border-radius:99px;background:linear-gradient(90deg,#6c63ff,#ff4d8d);transition:width .3s}.timer-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.secondary-btn{border:1px solid #e7e0f1;background:#fff;border-radius:12px;padding:9px 13px;font-size:11px;font-weight:900;color:var(--ink);transition:transform .15s,background .15s}.secondary-btn:hover{transform:translateY(-1px);background:#fff8e9}.secondary-btn.primary{background:#6c63ff;color:white;border-color:#6c63ff}.small-copy{font-size:11px;color:var(--muted);line-height:1.6}.leaderboard{padding:0 18px 18px}.leader-row{display:flex;align-items:center;justify-content:space-between;padding:10px 2px;border-bottom:1px solid #eeeaf4;font-size:12px;font-weight:800}.leader-row:last-child{border:0}.rank{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:9px;background:#f1edff;margin-right:8px}.player-form{display:flex;gap:7px;margin-top:10px}.player-form input{width:100%;min-width:0;border:1px solid #e6e0f0;background:#fff;border-radius:12px;padding:10px 12px;font-size:12px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#27223b;color:white;padding:12px 17px;border-radius:14px;box-shadow:0 12px 30px #20163233;font-size:12px;font-weight:900;z-index:1200;transition:.25s;max-width:calc(100vw - 32px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.footer{text-align:center;color:#9993aa;font-size:10px;font-weight:700;margin:20px 0 0}.hidden{display:none!important}
+@keyframes jelly{0%{transform:scale(1) rotate(0)}22%{transform:scale(1.13,.86) rotate(-7deg)}42%{transform:scale(.88,1.12) rotate(5deg)}62%{transform:scale(1.06,.96) rotate(-2deg)}80%{transform:scale(.98,1.02) rotate(1deg)}100%{transform:scale(1) rotate(0)}}@keyframes floatUp{0%{opacity:0;transform:translate(-50%,-4px) scale(.75) rotate(-5deg)}12%{opacity:1}75%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--drift,0px)),-105px) scale(1.16) rotate(var(--rot,8deg)}}@keyframes spark{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(140deg) scale(.15)}}@keyframes ring{0%{transform:scale(.92);opacity:.8}100%{transform:scale(1.16);opacity:0}}@keyframes orbit{to{transform:rotate(360deg)}}@keyframes glow{0%{filter:brightness(1)}45%{filter:brightness(1.2) saturate(1.4)}100%{filter:brightness(1)}}@media(max-width:780px){.app{padding:14px 12px 30px}.layout{grid-template-columns:1fr}.click-panel{min-height:440px}.fries-wrap{width:200px;height:200px}.fries-btn{width:170px;height:170px}.fries-btn .emoji{font-size:90px}.right-column{grid-template-columns:1fr 1fr;align-items:start}.right-column .panel:first-child{grid-column:1/-1}.bottom-grid{margin-top:14px}}@media(max-width:520px){.stats{gap:7px}.stat{padding:12px 10px;border-radius:15px}.stat-label{font-size:10px}.stat-value{font-size:20px}.topbar{align-items:flex-start}.status{font-size:10px;padding:8px}.brand{gap:9px}.logo{width:45px;height:45px;border-radius:15px;font-size:24px}.subtitle{font-size:10px}.click-panel{min-height:410px;padding:22px 12px}.right-column{grid-template-columns:1fr}.right-column .panel:first-child{grid-column:auto}.bottom-grid{grid-template-columns:1fr}.shop-item{grid-template-columns:44px minmax(0,1fr) auto;padding:10px}.shop-icon{width:42px;height:42px}.buy-btn{min-width:72px;padding:9px 8px}.panel-head{padding:17px 16px 11px}.shop-list{padding:0 10px 12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <div class="brand"><div class="logo">🍟</div><div><h1>薯條點擊大亨</h1><div class="subtitle">FRIES TYCOON · 點出你的薯條帝國</div></div></div>
+  <div class="status"><span class="dot"></span><span id="cloudStatus">本機存檔已啟用</span></div>
+</header>
+<section class="stats">
+  <div class="stat"><div class="stat-label">🪙 薯條基金</div><div class="stat-value" id="money">$0</div></div>
+  <div class="stat"><div class="stat-label">⚡ 每次點擊</div><div class="stat-value" id="clickPower">$1 <small>/ 點</small></div></div>
+  <div class="stat"><div class="stat-label">💸 自動收益</div><div class="stat-value" id="income">$0 <small>/ 秒</small></div></div>
+</section>
+<main class="layout">
+  <section class="panel click-panel" id="clickPanel">
+    <div class="eyebrow">✦ 熱騰騰 · 點擊賺錢 ✦</div>
+    <div class="click-title">點我賣薯條！</div>
+    <div class="click-hint">每點一下就能賺錢，升級設備賺更多</div>
+    <div class="fries-wrap">
+      <div class="ring"></div><div class="ring"></div>
+      <button class="fries-btn" id="friesBtn" aria-label="點擊薯條賺錢"><span class="emoji">🍟</span></button>
+    </div>
+    <div class="click-value">本次收益 <strong id="clickReward">+$1</strong></div>
+    <div class="click-count">已服務 <span id="clicks">0</span> 位顧客　✦　連點開店中</div>
+  </section>
+  <div class="right-column">
+    <section class="panel">
+      <div class="panel-head"><div><h2>🛍️ 薯條升級商店</h2><p>投資設備，打造自動化薯條帝國</p></div><span class="tag">UPGRADE</span></div>
+      <div class="shop-list" id="shopList"></div>
+    </section>
+  </div>
+</main>
+<section class="bottom-grid">
+  <section class="panel">
+    <div class="panel-head"><div><h2>⏱️ 開店計時器</h2><p>開店期間持續累積自動收益</p></div><span class="tag" id="timerState">營業中</span></div>
+    <div class="timer-content">
+      <div class="timer-display" id="timerDisplay">05:00</div>
+      <div class="timer-track"><div class="timer-bar" id="timerBar"></div></div>
+      <div class="timer-actions"><button class="secondary-btn primary" id="timerToggle">⏸ 暫停計時</button><button class="secondary-btn" id="timerReset">↻ 重設 5 分鐘</button><button class="secondary-btn" id="saveBtn">💾 立即存檔</button></div>
+      <p class="small-copy">計時器歸零後自動收益暫停；你仍可手動點擊薯條。按重設可重新營業。</p>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="panel-head"><div><h2>🏆 店長紀錄</h2><p>本裝置的遊玩紀錄與雲端排行榜</p></div><span class="tag">RECORD</span></div>
+    <div class="leaderboard">
+      <div class="leader-row"><span>🍟 累計點擊</span><strong id="totalClicks">0</strong></div>
+      <div class="leader-row"><span>🧾 已購買升級</span><strong id="upgradeCount">0</strong></div>
+      <div class="leader-row"><span>💰 累計營收</span><strong id="lifetime">$0</strong></div>
+      <div class="player-form"><input id="playerName" maxlength="20" placeholder="輸入店長暱稱（最多 20 字）" aria-label="店長暱稱"><button class="secondary-btn" id="syncBtn">☁️ 同步</button></div>
+      <div class="small-copy" id="syncMessage" style="margin-top:9px">設定 Supabase 後可同步你的紀錄。</div>
+    </div>
+  </section>
+</section>
+<div class="footer">薯條點擊大亨 · 你的每一次點擊都很有價值 🍟</div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module">
+/*
+ * Optional Supabase cloud sync:
+ * 1) Create a Supabase project and run supabase/schema.sql.
+ * 2) Fill SUPABASE_URL and SUPABASE_ANON_KEY below with the project's URL
+ *    and publishable/anon key. Never put a service_role/secret key in a browser.
+ */
+const SUPABASE_URL = "https://pmdbdckspefacykvfvbq.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_R1p34EuAIB00lCGvu-CgtA_bX_lBPw9";
+const SAVE_KEY = "fries-tycoon-save-v1";
+const START_TIME = 300;
+const products = [
+ {id:"better-potato",name:"優質馬鈴薯",desc:"每次點擊額外 +$1",icon:"🥔",base:25,scale:1.48,type:"click",amount:1},
+ {id:"golden-oil",name:"黃金炸油鍋",desc:"每次點擊額外 +$5",icon:"🍳",base:120,scale:1.62,type:"click",amount:5},
+ {id:"sauce-station",name:"神級醬料台",desc:"每次點擊額外 +$25",icon:"🧂",base:650,scale:1.72,type:"click",amount:25},
+ {id:"mini-counter",name:"迷你販售櫃",desc:"每秒自動賺取 $2",icon:"🏪",base:80,scale:1.55,type:"auto",amount:2},
+ {id:"robot-chef",name:"機器人廚師",desc:"每秒自動賺取 $12",icon:"🤖",base:450,scale:1.65,type:"auto",amount:12},
+ {id:"fries-factory",name:"薯條工廠",desc:"每秒自動賺取 $80",icon:"🏭",base:2500,scale:1.75,type:"auto",amount:80}
+];
+const fresh = () => ({money:0,clicks:0,lifetime:0,levels:{},remaining:START_TIME,timerRunning:true,playerName:""});
+let state = fresh();
+let toastTimer;
+const $ = id => document.getElementById(id);
+const fmt = n => "$" + Math.floor(n).toLocaleString("en-US");
+const totalLevels = () => products.reduce((s,p)=>s+(state.levels[p.id]||0),0);
+const clickPower = () => 1 + products.filter(p=>p.type==="click").reduce((s,p)=>s+(state.levels[p.id]||0)*p.amount,0);
+const autoIncome = () => products.filter(p=>p.type==="auto").reduce((s,p)=>s+(state.levels[p.id]||0)*p.amount,0);
+const costFor = p => Math.floor(p.base * Math.pow(p.scale,state.levels[p.id]||0));
+function showToast(msg){const t=$("toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200)}
+function saveLocal(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(state));}catch(e){console.warn("Local save unavailable",e)}}
+function loadLocal(){try{const raw=localStorage.getItem(SAVE_KEY);if(raw){const parsed=JSON.parse(raw);state={...fresh(),...parsed,levels:{...fresh().levels,...parsed.levels}};state.money=Math.max(0,Number(state.money)||0);state.remaining=Math.max(0,Math.min(START_TIME,Number(state.remaining)||0));state.clicks=Math.max(0,Number(state.clicks)||0);state.lifetime=Math.max(0,Number(state.lifetime)||0)}}catch(e){state=fresh()}}
+function renderShop(){
+ $("shopList").innerHTML=products.map(p=>{const level=state.levels[p.id]||0,cost=costFor(p);return `<article class="shop-item"><div class="shop-icon">${p.icon}</div><div><div class="shop-name">${p.name}</div><div class="shop-desc">${p.desc}</div><div class="shop-level">擁有 Lv.${level}</div></div><button class="buy-btn" data-buy="${p.id}" ${state.money<cost?"disabled":""}>${fmt(cost)}<br><small>購買</small></button></article>`}).join("");
+ $("shopList").querySelectorAll("[data-buy]").forEach(btn=>btn.addEventListener("click",()=>buy(btn.dataset.buy)));
+}
+function render(){
+ $("money").textContent=fmt(state.money);$("clickPower").innerHTML=`${fmt(clickPower())} <small>/ 點</small>`;$("income").innerHTML=`${fmt(autoIncome())} <small>/ 秒</small>`;
+ $("clickReward").textContent="+"+fmt(clickPower());$("clicks").textContent=state.clicks.toLocaleString();$("totalClicks").textContent=state.clicks.toLocaleString();$("upgradeCount").textContent=totalLevels().toLocaleString();$("lifetime").textContent=fmt(state.lifetime);
+ $("timerDisplay").textContent=`${String(Math.floor(state.remaining/60)).padStart(2,"0")}:${String(Math.floor(state.remaining%60)).padStart(2,"0")}`;
+ $("timerBar").style.width=(state.remaining/START_TIME*100)+"%";$("timerToggle").textContent=state.timerRunning?"⏸ 暫停計時":"▶ 開始營業";$("timerState").textContent=state.timerRunning?"營業中":"已暫停";
+ $("playerName").value=state.playerName||"";renderShop();
+}
+function buy(id){const p=products.find(x=>x.id===id);if(!p)return;const cost=costFor(p);if(state.money<cost){showToast("金額不足！再多賣一些薯條吧 🍟");return}state.money-=cost;state.levels[id]=(state.levels[id]||0)+1;saveLocal();render();$("friesBtn").classList.remove("upgrade-glow");void $("friesBtn").offsetWidth;$("friesBtn").classList.add("upgrade-glow");showToast(`升級成功！${p.name} Lv.${state.levels[id]}`)}
+function spawnFloat(x,y,amount){const el=document.createElement("div");el.className="float-text";el.textContent="+"+fmt(amount);el.style.left=x+"px";el.style.top=y+"px";el.style.setProperty("--drift",(Math.random()*70-35)+"px");el.style.setProperty("--rot",(Math.random()*20-10)+"deg");document.body.appendChild(el);el.addEventListener("animationend",()=>el.remove(),{once:true})}
+function spawnSparks(x,y){const colors=["#ff7a00","#ffca3a","#ff4d8d","#6c63ff","#22c55e"];for(let i=0;i<7;i++){const s=document.createElement("i");s.className="spark";s.style.left=x+"px";s.style.top=y+"px";s.style.background=colors[Math.floor(Math.random()*colors.length)];s.style.setProperty("--dx",(Math.random()*130-65)+"px");s.style.setProperty("--dy",(Math.random()*-100-15)+"px");document.body.appendChild(s);s.addEventListener("animationend",()=>s.remove(),{once:true})}}
+function clickFries(e){const value=clickPower();state.money+=value;state.lifetime+=value;state.clicks++;const r=$("friesBtn").getBoundingClientRect();const x=e.clientX??(r.left+r.width/2),y=e.clientY??(r.top+r.height/2);spawnFloat(x,y,value);spawnSparks(x,y);const b=$("friesBtn");b.classList.remove("bounce");void b.offsetWidth;b.classList.add("bounce");saveLocal();render()}
+$("friesBtn").addEventListener("pointerdown",clickFries);
+$("timerToggle").addEventListener("click",()=>{if(state.remaining<=0&&!state.timerRunning){showToast("時間已到，請按重設重新營業");return}state.timerRunning=!state.timerRunning;saveLocal();render()});
+$("timerReset").addEventListener("click",()=>{state.remaining=START_TIME;state.timerRunning=true;saveLocal();render();showToast("新一輪營業開始！")});
+$("saveBtn").addEventListener("click",()=>{saveLocal();showToast("遊戲進度已儲存到此裝置 💾")});
+$("playerName").addEventListener("change",e=>{state.playerName=e.target.value.trim().slice(0,20);saveLocal()});
+let supabase=null;
+async function setupSupabase(){if(!SUPABASE_URL||!SUPABASE_ANON_KEY){$("cloudStatus").textContent="本機存檔已啟用";return}try{const {createClient}=await import("https://esm.sh/@supabase/supabase-js@2.57.0");supabase=createClient(SUPABASE_URL,SUPABASE_ANON_KEY);$("cloudStatus").textContent="雲端連線就緒";$("syncMessage").textContent="已連接 Supabase。輸入暱稱後按同步即可上傳分數。"}catch(e){console.error(e);$("cloudStatus").textContent="本機存檔模式";$("syncMessage").textContent="雲端套件載入失敗，遊戲仍可正常本機遊玩。"}}
+async function syncCloud(){
+ state.playerName=$("playerName").value.trim().slice(0,20);saveLocal();
+ if(!supabase){showToast("尚未設定 Supabase，進度已保存在本機");$("syncMessage").textContent="請依 README 設定 Supabase URL 與 publishable/anon key。";return}
+ if(!state.playerName){showToast("請先輸入店長暱稱");$("playerName").focus();return}
+ $("syncBtn").disabled=true;$("syncMessage").textContent="正在同步…";
+ try{
+  const {data:{user},error:authError}=await supabase.auth.getUser();if(authError)throw authError;
+  // Anonymous public score submission is intentionally disabled by default.
+  // This safe starter requires an authenticated user before writing a score.
+  if(!user){const {error}=await supabase.auth.signInAnonymously();if(error)throw new Error("請在 Supabase Authentication 開啟 Anonymous Sign-ins 後再同步");}
+  const {data:{user:current},error:userErr}=await supabase.auth.getUser();if(userErr||!current)throw userErr||new Error("登入狀態無法確認");
+  const payload={user_id:current.id,display_name:state.playerName,score:Math.floor(state.lifetime),total_clicks:Math.floor(state.clicks),upgrades:Math.floor(totalLevels()),updated_at:new Date().toISOString()};
+  const {error}=await supabase.from("fries_scores").upsert(payload,{onConflict:"user_id"});if(error)throw error;
+  $("syncMessage").textContent="雲端紀錄同步成功！";showToast("雲端紀錄同步成功 ☁️");
+ }catch(e){console.error(e);$("syncMessage").textContent="同步未完成："+(e.message||"請檢查設定");showToast("同步失敗，已保留本機存檔")}finally{$("syncBtn").disabled=false}
+}
+$("syncBtn").addEventListener("click",syncCloud);
+let last=Date.now(),saveAccumulator=0;
+setInterval(()=>{const now=Date.now(),dt=Math.min(2,(now-last)/1000);last=now;if(state.timerRunning&&state.remaining>0){state.remaining=Math.max(0,state.remaining-dt);if(autoIncome()>0){const gain=autoIncome()*dt;state.money+=gain;state.lifetime+=gain}if(state.remaining<=0){state.timerRunning=false;showToast("本輪營業結束！重設計時器可繼續自動收益。")}}saveAccumulator+=dt;if(saveAccumulator>=5){saveAccumulator=0;saveLocal()}render()},250);
+document.addEventListener("visibilitychange",()=>{if(document.hidden)saveLocal()});window.addEventListener("beforeunload",saveLocal);
+loadLocal();render();setupSupabase();
+</script>
+</body>
+</html>
